@@ -1,0 +1,32 @@
+---
+title: "Centrepeat_abundgraphs"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+library(reshape2)
+
+data <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_clean.csv")
+data.m <- melt(data,id.vars="Taxa")
+names(data.m)[2]<-paste("Rank")
+#names(data.m)[3]<-paste("Percent Genomic Composition")
+ggplot(data.m, aes(Taxa, value)) + 
+  geom_bar(aes(fill = Rank), position = "dodge", stat="identity") + labs(y="Percent Genomic Composition")
+
+data2 <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_totals.csv")
+ggplot(data2, aes(Taxa, Total))+ geom_bar(aes(fill = Taxa),stat="identity") +labs(x="",y="Tandem Repeat Content")+theme(axis.ticks = element_blank(), axis.text.x = element_blank())
+```
+
+
+ENDFILE
+
+ggplot(data, aes(Total, fill=Species)) + geom_bar(position="dodge", stat="identity")
+?geom_bar
+ggplot(data, aes(Apluda, fill=cut)) + geom_bar(position="dodge")
+
+
+dat <- data.frame(country=c('USA','Brazil','Ghana','England','Australia'), Stabbing=c(15,10,9,6,7), Accidents=c(20,25,21,28,15), Suicide=c(3,10,7,8,6))
+dat.m <- melt(dat, id.vars='country')
+ggplot(dat.m, aes(variable, value)) + 
+  geom_bar(aes(fill = country), position = "dodge", stat="identity")

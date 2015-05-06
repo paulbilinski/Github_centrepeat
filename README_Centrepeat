@@ -1,0 +1,506 @@
+Centromere Repeat Evolution in the Grasses
+
+COPIED AND DONE KIND OF DIFFERENTLY FOR MY SINGLE PUB
+October 2013-February 2014
+REDO: April 2015
+by: Paul Bilinski
+
+to do things interactively: srun --pty -p bigmemh bash
+
+
+Below is a running log/journal of the final analyses performed for the Hufford et al
+centromere evolution paper.  Entries are not made in chronological order, but rather
+broken up by tasks completed.  Different form of organization than the Waters et al
+paper, but hopefully better.
+
+Searching the document:
+
+--- indicates new task
+!!! indicates pressing question to be addressed, probably by jeff
+### indicates broad project segment
+
+###Testing Genomic Abundance
+
+--- Abundance in the different Centromeric Retros
+
+Initial examination of the CRM in rice and sorghum showed that there is not much difference
+in using either rice or maize or sorghum (see CRR CRS CRM testing in PB farm dir).  To
+test this on empirical data, I ran each of our files (first iteration, obviously flawed
+as a lot of the lanes did not work) against the different homologous regions of the TEs.
+
+###Building De novo Sequence
+
+--- De Novo Building with Mira
+
+Submit script via sbatch Submit_assembly.sh
+
+	#!/bin/bash
+	#SBATCH -D /home/pbilinsk/huffwork/Assembly
+	#SBATCH -o /home/pbilinsk/huffwork/Assembly/slurmlog/assembly-stout-%j.txt 
+	#SBATCH -e /home/pbilinsk/huffwork/Assembly/slurmlog/assembly-sterr-%j.txt
+	#SBATCH -J Assemble
+	#SBATCH -p serial
+	set -e
+	set -u
+
+
+	mira manifest.conf >&log_assembly.txt
+	
+The manifest file looks like:
+
+	project = RimmarepeatASS 
+	job = genome,denovo,accurate
+	parameters = -highlyrepetitive -NW:cnfs=no -NW:mrnl=200 -HS:mnr=no
+
+	readgroup = Rimma
+	data = /home/pbilinsk/huffwork/Data/FWD/MH_RIMMA0019.J.fastq
+	technology = solexa	
+
+This produces a folder that contains project_results.
+
+This was repeated for each of the assemblies, with suitable paths.  All files are on farm,
+in the directory huffwork under user pbilinsk
+
+--- Using Tandem repeat finder on the assembly file from mira and filter
+
+In the _results folder, you will find the outputs of the assembly.  One of them will be
+the unpadded file.  example:
+
+RimmarepeatASS_out.unpadded.fasta
+ZperRepeat_out.unpadded.fasta
+ApludaRepeat_out.unpadded.fasta
+SorghumRepeat_out.unpadded.fasta
+TperuRepeat_out.unpadded.fasta
+PhyloRepeat_out.unpadded.fasta
+TdactRepeat_out.unpadded.fasta
+TriturRepeat_out.unpadded.fasta
+panrepeat_out.unpadded.fasta
+
+Round2
+anepalRepeat_out.unpadded.fasta
+hyphiRepeat_out.unpadded.fasta
+isrugRepeat_out.unpadded.fasta
+osatRepeat_out.unpadded.fasta
+tflorRepeat_out.unpadded.fasta
+tlaxRepeat_out.unpadded.fasta
+udigRepeat_out.unpadded.fasta
+
+Round3 - had to change manifest file for new version of mira: 
+parameters = --hirep_good -NW:cnfs=no -NW:mrnl=200 -HS:mnr=no
+tefRepeat_out.unpadded.fasta
+
+
+Download this file from the cluster, and run trf on it locally.
+
+./trf407b.macos64 RimmarepeatASS_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 ZperRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 ApludaRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 SorghumRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 TanderRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 TperuRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 PhyloRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 TdactRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 TriturRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 panrepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+
+Round 2
+./trf407b.macos64 anepalRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 hyphiRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 isrugRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 osatRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 tflorRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 tlaxRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+./trf407b.macos64 udigRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+
+Round3
+./trf407b.macos64 tefRepeat_out.unpadded.fasta 2 7 7 80 10 50 2000 -h
+
+
+Next, take the .dat produced by TRF and filter it based on the length requirements we see
+in Melters et al 2013.  They found that the shortest tandem repeat in a plant was 40bp
+long, in ricin.  The script TRF_parser.pl will extract all sequences whose tandem repeat
+length is more than 40bp.  
+
+perl TRF_parser.pl RimmarepeatASS_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > Rimmarepeat_TRFfinds.fasta
+perl TRF_parser.pl ZperRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > Zperrepeat_TRFfinds.fasta
+perl TRF_parser.pl ApludaRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > Apludarepeat_TRFfinds.fasta
+perl TRF_parser.pl SorghumRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > Sorghumrepeat_TRFfinds.fasta
+perl TRF_parser.pl TperuRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > Tperurepeat_TRFfinds.fasta
+perl TRF_parser.pl TanderRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > Tanderrepeat_TRFfinds.fasta
+perl TRF_parser.pl TdactRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > Tdactrepeat_TRFfinds.fasta
+perl TRF_parser.pl TriturRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > Triturrepeat_TRFfinds.fasta
+
+perl TRF_parser.pl PhyloRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > Phylorepeat_TRFfinds.fasta
+perl TRF_parser.pl panrepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > panrepeat_TRFfinds.fasta
+#panicum has too few assemblies made.  not going to be a fair comparison.
+
+Round2
+perl TRF_parser.pl anepalRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > anepalrepeat_TRFfinds.fasta
+perl TRF_parser.pl hyphiRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > hyphirepeat_TRFfinds.fasta
+perl TRF_parser.pl isrugRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > isrugrepeat_TRFfinds.fasta
+perl TRF_parser.pl osatRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > osatrepeat_TRFfinds.fasta
+perl TRF_parser.pl tflorRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > tflorrepeat_TRFfinds.fasta
+perl TRF_parser.pl tlaxRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > tlaxrepeat_TRFfinds.fasta
+perl TRF_parser.pl udigRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > udigrepeat_TRFfinds.fasta
+
+Round3
+perl TRF_parser.pl tefRepeat_out.unpadded.fasta.2.7.7.80.10.50.2000.dat > tefrepeat_TRFfinds.fasta
+
+This will produce a file where each line is a tandem repeat and its name is >textassembly#
+
+###Genomic Abundance
+
+With the TRF file made for each of the grasses we are studying, we now need to make them into
+Mosaik mapping references.  We can do so with 
+
+./MosaikBuild -fr Triturrepeat_TRFfinds.fasta -oa Triturrepeat_TRFfinds.dat
+
+These references are on the cluster in /huffwork/References
+From there, we want to prepare the libraries for mapping against our newly made TRF refs.
+These will be found in /huffwork/Data, where they break down into the different directories
+based on when they were sequenced.  From here, we created a new directory for EACH grass,
+the novo_______ so that all of the files are in those directories.  We map the read libraries
+against the trf references.  From the mapping, .loc files are produced to show the ranks.
+We convert the .loc files to a Ranks.csv, download locally, then get rid of all of the text
+so that it is a clean csv.  This means textwrangler for spaces and replace in the ,'s.
+
+As we parse out this information, also store the total number of reads and the total hitting
+all of the TRF in the MASTER file.  This will be useful to identify how much of each genome
+is tandemly repetitive, versus how much the top contig captures.
+
+With the ranks made, download them to a local folder.  Here, we will sort them in excel, ID
+the top contig, and use that as a blast reference.  Each contig that has BLAST homology to
+it will be removed from the list, then we take the next top repeat, and repeat.  I will work
+on getting this stream lined for anepal, as it is one that will have a bunch of potential tops.
+
+When the top contig is identified, copy and paste it into a new file.
+
+So after going through the path, I realized that there is an artificial cap to the number of
+BLAST hits for 500.  This will affect what our top hits are and how blast works, so i will
+keep the top number of hits matching with the top number of contigs assembled from TRF.
+This number belongs to zea mays with just under 15000.
+
+blastn -query anepal_1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/anepalrepeat_TRFfinds.fasta -task blastn -out DB_anepal1
+perl Blast_DBparser.pl DB_anepal1 > assemblynamesinDB_anepal1.txt
+#we had to change Blast_DBparser.pl to not print query but subject ID
+
+We then get the uniq ID's
+
+cat assemblynamesinDB_anepal1.txt | sort | uniq > del_anepal1.txt
+
+Transfer that file back to my computer, where we will use an R script to remove those contigs
+that have blast homology to our top ID.  The script is found in:
+/Users/paulbilinski/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance
+
+Run the r script, ID the next top hit, pull it out of the TRF contig file, and reBLAST.
+I just copy and paste the second hit into 
+
+blastn -query anepal_2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/anepalrepeat_TRFfinds.fasta -task blastn -out DB_anepal2
+perl Blast_DBparser.pl DB_anepal2 > assemblynamesinDB_anepal2.txt
+cat assemblynamesinDB_anepal2.txt | sort | uniq > del_anepal2.txt
+
+blastn -query anepal_3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/anepalrepeat_TRFfinds.fasta -task blastn -out DB_anepal3
+perl Blast_DBparser.pl DB_anepal3 > assemblynamesinDB_anepal3.txt
+cat assemblynamesinDB_anepal3.txt | sort | uniq > del_anepal3.txt
+
+#so for these guys, i did a pipeline for monomer and contig, and it didnt really make a
+#difference, seems like just so much of the genome are these highly variable knob-like
+#things that they will be the top contig most of the time.  Kept monomer as FISH ref.
+
+Next up apluda.  Make a directory on my computer for apluda filtering, make another dir
+on the cluster for apluda filtering.  Copy over the ranks file into my comp and the parser
+onto the cluster dir.  For the ranks file, rank them first, then you have to go in and get
+rid of the first empty column and then save it with unix line endings in text wrangler.
+
+blastn -query apluda.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Apludarepeat_TRFfinds.fasta -task blastn -out DB_apluda1
+perl Blast_DBparser.pl DB_apluda1 > assemblynamesinDB_apluda1.txt
+cat assemblynamesinDB_apluda1.txt | sort | uniq > del_apluda1.txt
+
+blastn -query apluda.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Apludarepeat_TRFfinds.fasta -task blastn -out DB_apluda2
+perl Blast_DBparser.pl DB_apluda2 > assemblynamesinDB_apluda2.txt
+cat assemblynamesinDB_apluda2.txt | sort | uniq > del_apluda2.txt
+
+blastn -query apluda.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Apludarepeat_TRFfinds.fasta -task blastn -out DB_apluda3
+perl Blast_DBparser.pl DB_apluda3 > assemblynamesinDB_apluda3.txt
+cat assemblynamesinDB_apluda3.txt | sort | uniq > del_apluda3.txt
+
+#and hypdip
+
+blastn -query hypdip.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/hyphirepeat_TRFfinds.fasta -task blastn -out DB_hypdip1
+perl Blast_DBparser.pl DB_hypdip1 > assemblynamesinDB_hypdip1.txt
+cat assemblynamesinDB_hypdip1.txt | sort | uniq > del_hypdip1.txt
+
+blastn -query hypdip.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/hyphirepeat_TRFfinds.fasta -task blastn -out DB_hypdip2
+perl Blast_DBparser.pl DB_hypdip2 > assemblynamesinDB_hypdip2.txt
+cat assemblynamesinDB_hypdip2.txt | sort | uniq > del_hypdip2.txt
+
+blastn -query hypdip.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/hyphirepeat_TRFfinds.fasta -task blastn -out DB_hypdip3
+perl Blast_DBparser.pl DB_hypdip3 > assemblynamesinDB_hypdip3.txt
+cat assemblynamesinDB_hypdip3.txt | sort | uniq > del_hypdip3.txt
+
+#and isrug
+
+blastn -query isrug.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/isrugrepeat_TRFfinds.fasta -task blastn -out DB_isrug1
+perl Blast_DBparser.pl DB_isrug1 > assemblynamesinDB_isrug1.txt
+cat assemblynamesinDB_isrug1.txt | sort | uniq > del_isrug1.txt
+
+blastn -query isrug.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/isrugrepeat_TRFfinds.fasta -task blastn -out DB_isrug2
+perl Blast_DBparser.pl DB_isrug2 > assemblynamesinDB_isrug2.txt
+cat assemblynamesinDB_isrug2.txt | sort | uniq > del_isrug2.txt
+
+blastn -query isrug.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/isrugrepeat_TRFfinds.fasta -task blastn -out DB_isrug3
+perl Blast_DBparser.pl DB_isrug3 > assemblynamesinDB_isrug3.txt
+cat assemblynamesinDB_isrug3.txt | sort | uniq > del_isrug3.txt
+
+#and phylo
+
+blastn -query phylo.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Phylorepeat_TRFfinds.fasta -task blastn -out DB_phylo1
+perl Blast_DBparser.pl DB_phylo1 > assemblynamesinDB_phylo1.txt
+cat assemblynamesinDB_phylo1.txt | sort | uniq > del_phylo1.txt
+
+blastn -query phylo.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Phylorepeat_TRFfinds.fasta -task blastn -out DB_phylo2
+perl Blast_DBparser.pl DB_phylo2 > assemblynamesinDB_phylo2.txt
+cat assemblynamesinDB_phylo2.txt | sort | uniq > del_phylo2.txt
+
+blastn -query phylo.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Phylorepeat_TRFfinds.fasta -task blastn -out DB_phylo3
+perl Blast_DBparser.pl DB_phylo3 > assemblynamesinDB_phylo3.txt
+cat assemblynamesinDB_phylo3.txt | sort | uniq > del_phylo3.txt
+
+#and maize
+
+blastn -query mz.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Rimmarepeat_TRFfinds.fasta -task blastn -out DB_mz1
+perl Blast_DBparser.pl DB_mz1 > assemblynamesinDB_mz1.txt
+cat assemblynamesinDB_mz1.txt | sort | uniq > del_mz1.txt
+
+blastn -query mz.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Rimmarepeat_TRFfinds.fasta -task blastn -out DB_mz2
+perl Blast_DBparser.pl DB_mz2 > assemblynamesinDB_mz2.txt
+cat assemblynamesinDB_mz2.txt | sort | uniq > del_mz2.txt
+
+blastn -query mz.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Rimmarepeat_TRFfinds.fasta -task blastn -out DB_mz3
+perl Blast_DBparser.pl DB_mz3 > assemblynamesinDB_mz3.txt
+cat assemblynamesinDB_mz3.txt | sort | uniq > del_mz3.txt
+
+#and sorghum
+
+blastn -query sorgh.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Sorghumrepeat_TRFfinds.fasta -task blastn -out DB_sorgh1
+perl Blast_DBparser.pl DB_sorgh1 > assemblynamesinDB_sorgh1.txt
+cat assemblynamesinDB_sorgh1.txt | sort | uniq > del_sorgh1.txt
+
+blastn -query sorgh.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Sorghumrepeat_TRFfinds.fasta -task blastn -out DB_sorgh2
+perl Blast_DBparser.pl DB_sorgh2 > assemblynamesinDB_sorgh2.txt
+cat assemblynamesinDB_sorgh2.txt | sort | uniq > del_sorgh2.txt
+
+blastn -query sorgh.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Sorghumrepeat_TRFfinds.fasta -task blastn -out DB_sorgh3
+perl Blast_DBparser.pl DB_sorgh3 > assemblynamesinDB_sorgh3.txt
+cat assemblynamesinDB_sorgh3.txt | sort | uniq > del_sorgh3.txt
+
+#and tdact
+
+blastn -query tdact.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Triturrepeat_TRFfinds.fasta -task blastn -out DB_tdact1
+perl Blast_DBparser.pl DB_tdact1 > assemblynamesinDB_tdact1.txt
+cat assemblynamesinDB_tdact1.txt | sort | uniq > del_tdact1.txt
+
+blastn -query tdact.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Triturrepeat_TRFfinds.fasta -task blastn -out DB_tdact2
+perl Blast_DBparser.pl DB_tdact2 > assemblynamesinDB_tdact2.txt
+cat assemblynamesinDB_tdact2.txt | sort | uniq > del_tdact2.txt
+
+blastn -query tdact.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Triturrepeat_TRFfinds.fasta -task blastn -out DB_tdact3
+perl Blast_DBparser.pl DB_tdact3 > assemblynamesinDB_tdact3.txt
+cat assemblynamesinDB_tdact3.txt | sort | uniq > del_tdact3.txt
+
+#and osat
+
+blastn -query osat.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/osatrepeat_TRFfinds.fasta -task blastn -out DB_osat1
+perl Blast_DBparser.pl DB_osat1 > assemblynamesinDB_osat1.txt
+cat assemblynamesinDB_osat1.txt | sort | uniq > del_osat1.txt
+
+blastn -query osat.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/osatrepeat_TRFfinds.fasta -task blastn -out DB_osat2
+perl Blast_DBparser.pl DB_osat2 > assemblynamesinDB_osat2.txt
+cat assemblynamesinDB_osat2.txt | sort | uniq > del_osat2.txt
+
+blastn -query osat.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/osatrepeat_TRFfinds.fasta -task blastn -out DB_osat3
+perl Blast_DBparser.pl DB_osat3 > assemblynamesinDB_osat3.txt
+cat assemblynamesinDB_osat3.txt | sort | uniq > del_osat3.txt
+
+#and tander
+
+blastn -query tander.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Tanderrepeat_TRFfinds.fasta -task blastn -out DB_tander1
+perl Blast_DBparser.pl DB_tander1 > assemblynamesinDB_tander1.txt
+cat assemblynamesinDB_tander1.txt | sort | uniq > del_tander1.txt
+
+blastn -query tander.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Tanderrepeat_TRFfinds.fasta -task blastn -out DB_tander2
+perl Blast_DBparser.pl DB_tander2 > assemblynamesinDB_tander2.txt
+cat assemblynamesinDB_tander2.txt | sort | uniq > del_tander2.txt
+
+blastn -query tander.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Tanderrepeat_TRFfinds.fasta -task blastn -out DB_tander3
+perl Blast_DBparser.pl DB_tander3 > assemblynamesinDB_tander3.txt
+cat assemblynamesinDB_tander3.txt | sort | uniq > del_tander3.txt
+
+#and tflor
+
+blastn -query tflor.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/tflorrepeat_TRFfinds.fasta -task blastn -out DB_tflor1
+perl Blast_DBparser.pl DB_tflor1 > assemblynamesinDB_tflor1.txt
+cat assemblynamesinDB_tflor1.txt | sort | uniq > del_tflor1.txt
+
+blastn -query tflor.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/tflorrepeat_TRFfinds.fasta -task blastn -out DB_tflor2
+perl Blast_DBparser.pl DB_tflor2 > assemblynamesinDB_tflor2.txt
+cat assemblynamesinDB_tflor2.txt | sort | uniq > del_tflor2.txt
+
+blastn -query tflor.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/tflorrepeat_TRFfinds.fasta -task blastn -out DB_tflor3
+perl Blast_DBparser.pl DB_tflor3 > assemblynamesinDB_tflor3.txt
+cat assemblynamesinDB_tflor3.txt | sort | uniq > del_tflor3.txt
+
+#and tlax
+
+blastn -query tlax.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/tlaxrepeat_TRFfinds.fasta -task blastn -out DB_tlax1
+perl Blast_DBparser.pl DB_tlax1 > assemblynamesinDB_tlax1.txt
+cat assemblynamesinDB_tlax1.txt | sort | uniq > del_tlax1.txt
+
+blastn -query tlax.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/tlaxrepeat_TRFfinds.fasta -task blastn -out DB_tlax2
+perl Blast_DBparser.pl DB_tlax2 > assemblynamesinDB_tlax2.txt
+cat assemblynamesinDB_tlax2.txt | sort | uniq > del_tlax2.txt
+
+blastn -query tlax.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/tlaxrepeat_TRFfinds.fasta -task blastn -out DB_tlax3
+perl Blast_DBparser.pl DB_tlax3 > assemblynamesinDB_tlax3.txt
+cat assemblynamesinDB_tlax3.txt | sort | uniq > del_tlax3.txt
+
+#and tperu
+
+blastn -query tperu.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Tperurepeat_TRFfinds.fasta -task blastn -out DB_tperu1
+perl Blast_DBparser.pl DB_tperu1 > assemblynamesinDB_tperu1.txt
+cat assemblynamesinDB_tperu1.txt | sort | uniq > del_tperu1.txt
+
+blastn -query tperu.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Tperurepeat_TRFfinds.fasta -task blastn -out DB_tperu2
+perl Blast_DBparser.pl DB_tperu2 > assemblynamesinDB_tperu2.txt
+cat assemblynamesinDB_tperu2.txt | sort | uniq > del_tperu2.txt
+
+blastn -query tperu.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Tperurepeat_TRFfinds.fasta -task blastn -out DB_tperu3
+perl Blast_DBparser.pl DB_tperu3 > assemblynamesinDB_tperu3.txt
+cat assemblynamesinDB_tperu3.txt | sort | uniq > del_tperu3.txt
+
+#and urel
+
+blastn -query urel.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/udigrepeat_TRFfinds.fasta -task blastn -out DB_urel1
+perl Blast_DBparser.pl DB_urel1 > assemblynamesinDB_urel1.txt
+cat assemblynamesinDB_urel1.txt | sort | uniq > del_urel1.txt
+
+blastn -query urel.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/udigrepeat_TRFfinds.fasta -task blastn -out DB_urel2
+perl Blast_DBparser.pl DB_urel2 > assemblynamesinDB_urel2.txt
+cat assemblynamesinDB_urel2.txt | sort | uniq > del_urel2.txt
+
+blastn -query urel.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/udigrepeat_TRFfinds.fasta -task blastn -out DB_urel3
+perl Blast_DBparser.pl DB_urel3 > assemblynamesinDB_urel3.txt
+cat assemblynamesinDB_urel3.txt | sort | uniq > del_urel3.txt
+
+#and zper
+
+blastn -query zper.1.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Zperrepeat_TRFfinds.fasta -task blastn -out DB_zper1
+perl Blast_DBparser.pl DB_zper1 > assemblynamesinDB_zper1.txt
+cat assemblynamesinDB_zper1.txt | sort | uniq > del_zper1.txt
+
+blastn -query zper.2.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Zperrepeat_TRFfinds.fasta -task blastn -out DB_zper2
+perl Blast_DBparser.pl DB_zper2 > assemblynamesinDB_zper2.txt
+cat assemblynamesinDB_zper2.txt | sort | uniq > del_zper2.txt
+
+blastn -query zper.3.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db /home/pbilinsk/huffwork/BLAST_TRF_Parsing/BiggerNet/Zperrepeat_TRFfinds.fasta -task blastn -out DB_zper3
+perl Blast_DBparser.pl DB_zper3 > assemblynamesinDB_zper3.txt
+cat assemblynamesinDB_zper3.txt | sort | uniq > del_zper3.txt
+
+###
+
+Now we have to go back and get the actual counts for each of the repeat assemblies.  The
+counts that come out of the loc file.  These lines i used to test the bash script that i
+wrote to do all of the files.
+
+Apluda: M00958
+grep "AF M00958" MH_Apluda_mutica.fastq.dat.assembled_testassemblies759.ace | cut -d " " -f 2 | sort | uniq | wc -l
+grep "AF M00958" MH_Apluda_mutica.fastq.dat.assembled_testassemblies167.ace | cut -d " " -f 2 | sort | uniq | wc -l
+grep "AF M00958" MH_Apluda_mutica.fastq.dat.assembled_testassemblies970.ace | cut -d " " -f 2 | sort | uniq | wc -l
+grep "AF M00958" MH_Apluda_mutica.fastq.dat.assembled_testassemblies905.ace | cut -d " " -f 2 | sort | uniq | wc -l
+
+Anepal: M02034
+grep "AF M02034" MH_RIAN1.1.fastq.dat.assembled_testassemblies* | cut -d " " -f 2 | sort | uniq | wc -l
+grep "AF M02034" MH_RIAN1.1.fastq.dat.assembled_testassemblies222.ace | cut -d " " -f 2 | sort | uniq | wc -l
+grep "AF M02034" MH_RIAN1.1.fastq.dat.assembled_testassemblies1103.ace | cut -d " " -f 2 | sort | uniq | wc -l
+grep "AF M02034" MH_RIAN1.1.fastq.dat.assembled_testassemblies2076.ace | cut -d " " -f 2 | sort | uniq | wc -l
+
+So now i have to run the script for each of the files, get a new ranking and rerun everything.
+The numbers from the last run were just number of map locations, not number of reads aligning.
+The number of reads aligning are now retreived directly from the ace files and counted, sorted,
+and I have to reblast.
+
+for M00958
+cp ../novoapluda/getpercontig.sh .
+for M02034
+cp ../novoisrug/getpercontig.sh .
+
+Apluda: M00958
+./getpercontig.sh > unrankedapluda.csv
+cat unrankedapluda.csv | sort -t ',' -k2,2rn > rankedapluda.csv
+
+Anepal: M02034
+./getpercontig.sh > unrankedanepal
+cat unrankedapluda.csv | sort -t ',' -k2,2rn > rankedapluda.csv
+
+Hyp:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedhypdip.csv
+
+Isrug:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedisrug.csv
+
+phylo:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedphylo.csv
+
+zm:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedrimma.csv
+
+sorg:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedsorgh.csv
+
+tander:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedtander.csv
+
+tdact:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedtdact.csv
+
+tflor:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedtflor.csv
+
+tlax:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedtlax.csv
+
+tperu:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedtperu.csv
+
+urel:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedurel.csv
+
+zp:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedzp.csv
+
+osat:
+./getpercontig.sh > unranked
+cat unranked | sort -t ',' -k2,2rn > rankedosat.csv
+
+
+And thats it.
+
+
+
+
+
+
+
+

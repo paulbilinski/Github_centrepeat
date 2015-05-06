@@ -1,0 +1,254 @@
+---
+title: "FilteringTophits_novocent"
+output: html_document
+---
+
+This script will pair up with the blast results to ID the top contig and its % composition in the genome for each of the de novo cent repeats.  What we have done to this point is assemble, map, and ID the top contig.  We bring in the blast results from the cluster, read in the ranks file and read in the contigs that have blast homology to the top ranked contig.
+
+Anepal rankings
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/anepal_filtering/")
+ranks <- read.csv("rankedanepal.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_anepal1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_anepal2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_anepal3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+#blastfr <- read.csv("del_anepal4.txt",header=FALSE,row.names="V1")
+#toDrop4 <- rownames(blastfr)
+#after4 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+#Wait, only doing top 4, and we report fourth at the end of the third
+```
+
+Apluda chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/apluda_filtering/")
+ranks <- read.csv("rankedapluda.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_apluda1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_apluda2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_apluda3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+Hyphir chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/hyphir_filtering/")
+ranks <- read.csv("rankedhypdip.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_hypdip1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_hypdip2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_hypdip3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+isrug chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/isrug_filtering/")
+ranks <- read.csv("rankedisrug.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_isrug1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_isrug2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_isrug3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+phyllostachys chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/phylo_filtering/")
+ranks <- read.csv("rankedphylo.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_phylo1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_phylo2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_phylo3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+mz chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/rimma_filtering/")
+ranks <- read.csv("rankedrimma.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_mz1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_mz2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_mz3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+sorgh chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/sorgh_filtering/")
+ranks <- read.csv("rankedsorgh.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_sorgh1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_sorgh2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_sorgh3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+osat chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/osat_filtering/")
+ranks <- read.csv("rankedosat.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_osat1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_osat2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_osat3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+tdact chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/tdact_filtering/")
+ranks <- read.csv("rankedtdact.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_tdact1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_tdact2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_tdact3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+tander chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/tander_filtering/")
+ranks <- read.csv("rankedtander.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_tander1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_tander2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_tander3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+tflor chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/tflor_filtering/")
+ranks <- read.csv("rankedtflor.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_tflor1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_tflor2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_tflor3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+tlax chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/tlax_filtering/")
+ranks <- read.csv("rankedtlax.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_tlax1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_tlax2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_tlax3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+tperu chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/tperu_filtering/")
+ranks <- read.csv("rankedtperu.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_tperu1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_tperu2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_tperu3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+urel chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/urel_filtering/")
+ranks <- read.csv("rankedurel.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_urel1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_urel2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_urel3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+zper chunk
+
+```{r}
+setwd("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/zper_filtering/")
+ranks <- read.csv("rankedzp.csv",header=FALSE,row.names="V1")
+blasttop <- read.csv("del_zper1.txt",header=FALSE,row.names="V1")
+toDrop1 <- rownames(blasttop)
+after1 <- as.data.frame(ranks[ !(rownames(ranks) %in% toDrop1), , FALSE] )
+blasttwo <- read.csv("del_zper2.txt",header=FALSE,row.names="V1")
+toDrop2 <- rownames(blasttwo)
+after2 <- as.data.frame(after1[ !(rownames(after1) %in% toDrop2), , FALSE] )
+blastthr <- read.csv("del_zper3.txt",header=FALSE,row.names="V1")
+toDrop3 <- rownames(blastthr)
+after3 <- as.data.frame(after2[ !(rownames(after2) %in% toDrop3), , FALSE] )
+```
+
+
+
+
+
