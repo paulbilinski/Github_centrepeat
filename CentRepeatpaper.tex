@@ -147,6 +147,15 @@
 
 \newcommand{\lorem}{{\bf LOREM}}
 \newcommand{\ipsum}{{\bf IPSUM}}
+\newcommand{\citex}{\textcolor{red}{\textbf{CITE}} }
+\newcommand{\X}{\textcolor{red}{\textbf{X}} }
+\usepackage[colorinlistoftodos]{todonotes} % comments in margins
+\reversemarginpar
+\setlength{\marginparwidth}{5cm}
+\definecolor{flame}{rgb}{0.89, 0.35, 0.13}
+\newcommand{\jri}[1]{\todo[size=\scriptsize, color=flame]{#1}}
+\newcommand{\pb}[1]{\todo[size=\scriptsize, color=brown]{#1}}
+
 
 %% END MACROS SECTION
 
@@ -178,13 +187,14 @@ Jeffrey Ross-Ibarra*\textsuperscript{1,4}
 %with the Lorem Ipsum Consortium\textsuperscript{\textpilcrow}
 \\
 \bigskip
+\jri{please add Matt's affiliation}
 \bf{1} Dept. of Plant Sciences, University of California, Davis, CA, USA
 \\
 \bf{2} Dept. of Horticulture, University of Wisconsin-Madison, Madison, WI USA
 \\
 \bf{3} Hufford Iowa Affiliation
 \\
-\bf{4} Center for Population Biology, University of California, Davis, CA, USA
+\bf{4} Center for Population Biology and Genome Center, University of California, Davis, CA, USA
 \\
 \bigskip
 
@@ -217,29 +227,28 @@ Jeffrey Ross-Ibarra*\textsuperscript{1,4}
 % Please keep the abstract below 300 words
 \section*{Abstract}
 In studying genomic architecture, highly repetitive regions have historically posed a challenge when investigating sequence variation and content.
-Novel methodologies of investigating repetitive content have led researchers to decipher what information can be gained on centromeric repeats from whole genome shotgun reads.
-Here, we utilize sequence assembly and read mapping to identify genomic composition between different tandemly repetitive sequence classes.
+High-throughput sequencing has enabled researchers to use whole-genome shotgun sequencing to estimate the abundance of repetitive sequence, and these methodologies have been recently applied to centromeres.
+Here, we utilize sequence assembly and read mapping to identify and quantify the genomic abundance of between different tandem repeat sequences.
 Previous research has posited that the highest abundance tandem repeat in eukaryotic genomes is often the centromeric repeat, and we pair our bioinformatic pipeline with fluorescent in-situ hybridization data to test this hypothesis.
-We find that de novo assembly and bioinformatic filters can successfully identify repeats with homology to already known tandemly repeated sequences.
-However, fluorescent in-situ hybridization shows that de novo assembly fails to identify novel centromeric repeats, instead identifying other potentially important repetitive sequences.
+We find that de novo assembly and bioinformatic filters can successfully identify repeats with homology to known tandem repeats.
+Fluorescent in-situ hybridization, however, shows that de novo assembly fails to identify novel centromeric repeats, instead identifying other potentially important repetitive sequences.
 Together, our results test the applicability and limitations of using de novo repeat assembly of tandem repeats to identify novel centromeric repeats.
 Building on our findings of genomic composition, we also set forth a method for exploring the repetitive regions of non-model genomes whose diversity limits the applicability of established genetic resources.
-
 
 % Please keep the Author Summary between 150 and 200 words
 % Use first person. PLOS ONE authors please skip this step. 
 % Author Summary not valid for PLOS ONE submissions.   
 \section*{Author Summary}
-ROUGH: Melters et al say they can use most abundant tandem repeat to get centromeric repeat.
-we build a similar pipeline, identify most common tandem repeat, filter against known repeats, and identify the cent repeat in known genomes
-in several grasses we find novel repeats, and use fish to show that these are likely NOT cent repeats
-however, our pipeline also identifies a possible knob repeat in a nepalensis, whose sequence diversity is entirely new and potentially ancestral to many grasses.
-data: 
-bunch of grasses from across andropogonae (Matt as author)
-sequence them (Anne as author)
-identify canonical cent repeat (paul)
-FISH for repeat in known and unknown (jiming udig and hypdip)
-potentially FISH for the knob like repeat (ask Jiming to follow it up?)
+%ROUGH: Melters et al say they can use most abundant tandem repeat to get centromeric repeat.
+%we build a similar pipeline, identify most common tandem repeat, filter against known repeats, and identify the cent repeat in known genomes
+%in several grasses we find novel repeats, and use fish to show that these are likely NOT cent repeats
+%however, our pipeline also identifies a possible knob repeat in a nepalensis, whose sequence diversity is entirely new and potentially ancestral to many grasses.
+%data: 
+%bunch of grasses from across andropogonae (Matt as author)
+%sequence them (Anne as author)
+%identify canonical cent repeat (paul)
+%FISH for repeat in known and unknown (jiming udig and hypdip)
+%potentially FISH for the knob like repeat (ask Jiming to follow it up?)
 
 \linenumbers
 
@@ -253,31 +262,31 @@ Plant genomes can be up to 90\% repetitive (CITE).
 The repetitive sequence found in plants can be classified into two broad categories, either dispersed around the genome because the repeat is derived from transposable elements (TE) or tandemly repeated sequence.
 TE derived repeats comprise the majority of many eukaryotic genomes and are recognized for their different modes of amplification, being divided into class I (RNA intermediate) or class II (DNA intermediate) (CITE).
 TEs have been shown to impact gene expression (CITE) and chromatin status (CITE), functions which can have strong impacts on overall phenotype.
-The field of comparative genomics has shed light on the evolutionary history of TEs through the phylogeny (CITE), informed hypotheses about TE expansion and contraction (CITE), and traced TE function in related organisms (CITE).
+The field of comparative genomics has shed light on the evolutionary history of TEs through the phylogeny (CITE), informed hypotheses about TE expansion and contraction (CITE), and traced TE function in related organisms (CITE).\jri{need to fill in citations before sending to Jiming!}
 
 In comparison to the wealth of TE data across organisms, little is known about the function and evolutionary history of tandem repeats.
 Tandem repeats comprise a smaller percentage of the genome, though that percentage composition can vary wildly across different phylogenetic groups (CITE).
 The most common tandem repeats are found in the gene poor but structurally important telomeres and centromeres.
 Both telomeres and centromeres are highly heterochromatic, however, the mechanisms by which tandem repeat sequences contribute to the formation of centromeres or telomeres are only vaguely known.
 (Do I want a sentence here describing the mechanism?  I dont think so, but maybe)
-Previous research has also shown that tandem repeats are not necessary to the formation of centromeres (CITE), suggesting that tandem repeats may serve as a placeholder for an epigenetic signal that governs heterochromatin formation.
+Previous research has also shown that tandem repeats are not necessary for the formation of centromeres (CITE), suggesting that tandem repeats may serve as a placeholder for an epigenetic signal that governs heterochromatin formation.
 Tandem repeats are also found in other types of heterochromatin that suppress local recombination such as knobs in the model organism maize (\emph{Zea mays}, CITE).
 
 In an effort to better understand tandemly repeated sequence, researchers have begun to develop new methodologies that can study sequence variation of repeats without laborious assembly.
-The overabundance of whole genome short read data produced in a variety of organisms is an excellent and freely available data set in which to pilot novel methods.
+The abundance of whole genome short read data produced in a variety of organisms is an excellent and freely available resource in which to pilot novel methods.
 One such attempt has been to pair shotgun short read sequencing from different organisms with de novo repeat assembly \cite{melters2013comparative}, effectively constructing the average sequence and base pair length of tandem repeats genome wide.
-Melters et al applied their approach broadly across the phylogentic tree while relying on several model organisms to serve as anchors to reaffirm several findings.
-They assume that the most abundant tandem repeat in all taxa is the centromere repeat, and use this assumption to study centromere repeat evolution broadly.
-While the approach appears to work well in cases for which a reference genome is assembled and the organisms is animal, the method has known problems when working with plants.
+\cite{melters2013comparative}\jri{can't figure out how to make it put name first. natbib does this easily with citet, but we can't use that here??} applied their approach broadly across more than 280 plant and animal taxa, relying on several model organisms to serve as anchors to reaffirm several findings.\jri{this last clause is weird}
+They assume that the most abundant tandem repeat in all taxa is the centromere repeat, and use this assumption to study centromere repeat evolution broadly.\jri{repetitive}
+While the approach appears to work well in cases for which a reference genome is assembled and the organisms is animal, the method has known problems when working with plants.\jri{awkwards sentence}
 
 In our study, we aim to apply the basic pipeline of tandem repeat consensus assembly to a narrower phylogenetic group within the grasses to better understand tandem repeat contribution to genomic composition.
 We select species from across the tribe andropogoneae, including the agriculturally important species maize and sorghum.
-Maize and sorghum are ideal anchor species as both have reference genomes and their centromere repeats are diverged from one another.
-Because previous work has shown that sequencing libraries prepared through a identical methods retain relative composition of repetitive content (CITE), we elect to re-sequence species used in the study.
+Maize and sorghum are ideal anchor species as both have reference genomes and their centromere repeats are diverged from one another.\citex
+Because previous work has shown that sequencing libraries prepared through a identical methods retain relative composition of repetitive content (CITE)\jri{wha? i don't think anyone has shown this. instead they've shown the converse}, we elect to re-sequence species used in the study.
 We examine sequence similarity and genomic composition of highly abundant tandem repeats across the phylogeny, determine their homology to known centromere repeats, and perform fluorescent in-situ hybridization to test whether novel high abundance repeats show patterns consistent with other centromere repeats.
-We show that the assumption of Melters et al that the highest abundance tandem repeat is a centromere is not supported in grasses, especially when the centromere repeat is novel or unknown.
+We show that the assumption of Melters et al\jri{fix as proper cite} that the highest abundance tandem repeat is a centromere is not supported in grasses, especially when the centromere repeat is novel or unknown.
 However, we show that de novo tandem repeat assembly can be used to identify entirely novel repeats such as the knob-like repeat in \emph{Arundinella}.
-The ability to identify novel repeats from low cost sequencing can enable a new type of comparative genomic study that tracks the evolution of genomic composition.
+The ability to identify novel repeats from low cost sequencing can enable a new type of comparative genomic study that tracks the evolution of genomic composition.\jri{not sure I buy this.your paper suggests method don't work well!}
 
 %\begin{equation}\label{eq:schemeP} 
 %D_{coll} = \frac{D_f+\frac{[S]^2}{K_D S_T} D_S} {1+\frac{[S]^2}{K_D S_T}}, 
@@ -290,7 +299,7 @@ The ability to identify novel repeats from low cost sequencing can enable a new 
 \section*{Materials and Methods}
 
 \subsection*{Sequencing}
-The DNA was isolated from leaf tissue using the DNeasy plant extraction kit (Qiagen) according to the manufacturer’s instructions. 
+DNA was isolated from leaf tissue using the DNeasy plant extraction kit (Qiagen) according to the manufacturer’s instructions. 
 The samples were quantified using Qubit (Life Technologies) 1ug of DNA was fragmented using the bioruptor (Diagenode) with cycles of 30 seconds on, 30 seconds off. 
 The DNA fragments were prepared for Illumina sequencing. 
 First, DNA fragments were repaired with the End-Repair enzyme mix (New England Biolab). 
@@ -303,7 +312,7 @@ Parsing of reads was performed with in house scripts, and forward reads were use
 \subsection*{Phylogenetic Tree Reconstruction}
 We downloaded sequence data for two inter-genic spacers and one chloroplast gene at NCBI (sequences available on \url{https://github.com/paulbilinski/Github_centrepeat}).
 Sequences were aligned using seven iterations of MUSCLE \cite{edgar2004muscle}, and concatenated in order to build a neighbor joining tree using Jukes-Cantor distance.
-The topologies represent approximate relationships that were more thoroughly investigated in \cite{wu2012phylogeny}.
+The topologies represent approximate relationships that were more thoroughly investigated in \cite{wu2012phylogeny}.\jri{do they agree? is wu 2012 part of wu-tang?}
 
 \begin{figure}[h]
 \begin{center}
@@ -314,23 +323,23 @@ Topology is an approximate cladogram, reconstructed from 3 neutrally evolving lo
 A more accurate depiction of relationships is available in \cite{wu2012phylogeny}}
 \label{phylotree}
 \end{figure}
-
+\jri{is that a cladogram or an NJ tree?}
 \subsection*{Assembly and Genomic Composition of Centromere Repeats}
 
 % For figure citations, please use "Fig." instead of "Figure".
 
-We used MIRA (Chevreux et al. 1999, version 4.0; job = genome,denovo,accurate, parameters = -highlyrepetitive -NW:cnfs=no -NW:mrnl=200 -HS:mnr=no) to assemble low coverage libraries.
-We ran Tandem Repeat Finder \cite{benson1999tandem}  (TRF, ; parameters: 2 7 7 80 10 50 2000 -h) on all assembled contigs to select only those that contained tandem repeats.  
+We used MIRA (Chevreux et al. 1999, version 4.0; job = genome,denovo,accurate, parameters = -highlyrepetitive -NW:cnfs=no -NW:mrnl=200 -HS:mnr=no)to assemble low coverage libraries.
+We ran Tandem Repeat Finder \cite{benson1999tandem}  (TRF, ; parameters: 2 7 7 80 10 50 2000 -h) on all assembled contigs to select only those that contained tandem repeats.  \jri{params need to go in separate sentence. include formal citations} 
 %Previous surveys across both plant and animal taxa show that centromere repeats are short and often the most abundant tandem repeat \cite{melters2013comparative}.  
 %However, studies have shown that in certain grasses such as \emph{Zea mays} the centromere repeat is not the most abundant tandem repeat due to the presence of knobs (Not sure what to cite).
 %To ensure that we were selecting the most abundant tandem repeat with no homology to known knob repeats, we identified assembled contigs with homology to known knob repeats via blastn and removed them.
 %Those non-knob-like tandem repeat assemblies for each species were then used as a mapping reference for Mosaik, which stores information about multiply mapping reads (version 1.0; parameters optimized for tandem repetitive elements as in \cite{bilinski2014diversity}.
-To discover the genomic composition of each tandemly repeated contig, we used Mosaik, which stores information about multiply mapping reads (version 1.0; parameters optimized for tandem repetitive elements as in \cite{bilinski2014diversity}.
-Low coverage libraries were mapped against the reference and contigs were ranked by in-house scripts that quantified the number of reads aligning to each contig.
+To discover the genomic composition of each tandemly repeated contig, we used Mosaik \citex, which stores information about multiply mapping reads (version 1.0; parameters optimized for tandem repetitive elements as in \cite{bilinski2014diversity}.
+Low coverage libraries were mapped against the reference and contigs were ranked by the number of reads aligning to each contig.
 The top ranking contig was extracted, and the number of reads aligning to it was recorded from the assembly ace files.
 We then blasted (-evalue 1E-1 -outfmt 7 -max\_target\_seqs 15000 -task blastn) the top ranking contig against all other TRF assemblies, removed assemblies with BLAST homology.
-This process was repeated 4 times to identify the genomic composition of the 4 highest abundance tandem repeat groups.
-Scripts and step by step guides are available on \url{https://github.com/paulbilinski/Github_centrepeat}.
+This process was repeated 4 times to identify the genomic composition of the 4 highest abundance tandem repeat groups. 
+Scripts and step by step guides are available on \url{https://github.com/paulbilinski/Github_centrepeat}. \jri{kudos for githubbin'}
 %If the highest abundance contig shared homology with a known non-centromeric repeat in grasses, it was discarded.  
 %From the highest abundance polymer and our TRF identifications, we extracted the single chimeric monomer produced from TRF.  
 %We blasted the monomer against all other TRF assemblies, and used the monomer (narrow) and list of polymers with homology to the monomer (broad) as mapping references to identify genomic abundance of the putative centromere repeat.
@@ -345,35 +354,24 @@ Values are derived from the sum of all reads mapping to any tandemly repetitive 
 Species are listed ALPHABETICALLY? probably by phylogenetic relationships shown in Fig \ref{phylotree}.}
 \label{totaltrf}
 \end{figure}
-
+\jri{pretty, but i would prefer to see them ranked in descending order, with taxa in same order on side, with no fancy colors. black or grey bars on white background. this is fancier than is necessary to usefully convey info. try theme bw}
 
 \subsection*{Fluorescent In-Situ Hybridization}
 Sequences for FISH probes had (Udig 96\% identity; Hyp 96\% identity) as they were consensus sequences from TRF assemblies of highly similar high abundance contigs.
-Rest is jiming.
+[Text from Jiming here].
 
-%\begin{figure}[h]
-%\caption{{\bf Figure Title first bold sentence Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.}
-%Figure Caption Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
-%\label{fig1}
-%\end{figure}
-%
-%\begin{enumerate}
-%\item{react}
-%\item{diffuse free particles}
-%\item{increment time by dt and go to 1}
-%\end{enumerate}
 
 % Results and Discussion can be combined.
 \section*{Results}
 Assembly of low coverage whole genome shotgun Illumina data produced several thousand contigs in each species from our panel.
 From these, TRF was able to identify between 300 and 15,000 contigs comprised of tandem repeats in each taxa.
-The number of post-TRF contigs varied between taxa based on coverage and overall genomic repetitive content.
+The number of post-TRF contigs \jri{not sure what post-TRF means? these are same contigs referred to in previous sentence?} varied between taxa based on coverage and overall genomic repetitive content.
 We mapped whole genome shotgun Illumina data against all post-TRF contigs to approximate genomic composition of all tandemly repetitive sequence in our panel \ref{totaltrf}.
 Mapping against all contigs enables us to capture the broad diversity of all tandem repeats.
 Results show that our taxa vary greatly in their total tandem repeat content, ranging from over 13\% to under 1\%.
 We see high tandem repeat content within the \emph{Tripsacum} and \emph{Arundinella} genera, though \emph{Tripsacum} taxa show large variations.
 We wanted to see whether total tandem repeat content correlated with genome size.
-Using the Kew C-Value database and literature (what lit do we cite?), we obtained point estimates for genome size in each of our taxa.
+Using the Kew C-Value database and literature (what lit do we cite?) \jri{see \url{http://data.kew.org/cvalues/CvalServlet?querytype=1}}, we obtained point estimates for genome size in each of our taxa.
 The correlation between total tandem repeat content and genome size was poor (r=0.05).
 
 We further wanted to investigate the proportional contribution of the most common tandem repeat classes in each of our taxa.
@@ -392,10 +390,10 @@ Previous works have posited that this repeat is the centromeric repeat in many s
 We wanted test this hypothesis in taxa with known centromere repeats as well as in taxa with uncharacterized genomes.
 For \emph{Oryza} and \emph{Sorghum}, whose centromere repeats are known, the assumption that the highest abundance tandem repeat is the centromere repeat is true.
 In \emph{Zea} and \emph{Tripsacum}, where knob repeats are known to exist \cite{dennis1984knob}, the centromere repeat is not the highest abundance tandem repeat, though it is ranked within the top four.
-Several other taxa (LIST) had top ranked contigs that shared homology with the \emph{Sorghum} centromere repeat, suggesting that the method is robust in these taxa as well.
+Several other taxa (LIST)\jri{yes please include list!} had top ranked contigs that shared homology with the \emph{Sorghum} centromere repeat, suggesting that the method is robust in these taxa as well.
 However, our analyses also yielded several taxa whose top ranked contig had no homology to known centromere repeats.
-We chose to test the robustness of the Melters et al (2013) assumption in these taxa with fluorescent in-situ hybridization (FISH).
-In \emph{Urelytrum} and \emph{Hyparrhenia}, FISH results did not suggest that the highest ranked contig was centromeric, as probe illumination was scattered across chromosomes, not often found near central locations, or confined to only some of the chromosomes \ref{FISH}.
+We chose to test the robustness of the Melters et al (2013)\jri{formal cite} assumption in these taxa with fluorescent in-situ hybridization (FISH).
+In \emph{Urelytrum} and \emph{Hyparrhenia}, FISH results did not suggest that the highest ranked contig was centromeric, as probe illumination was scattered across chromosomes, not often found near central locations, or confined to only some of the chromosomes \ref{FISH}.\jri{for clarity, i often do fig:FISH for my labels, makes it easier reading later on}
 In \emph{Arundinella}, a taxon with a large portion of its genome comprised of tandem repeats, FISH results showed something we have yet to see though I hope it shows new knobs.
 \\
 
@@ -423,49 +421,24 @@ In \emph{Arundinella}, a taxon with a large portion of its genome comprised of t
 \label{FISH2}
 \end{figure}
 
-
-%\begin{table}[!ht]
-%\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
-%\caption{
-%{\bf Table caption Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.}}
-%\begin{tabular}{|l|l|l|l|l|l|l|l|}
-%\hline
-%\multicolumn{4}{|l|}{\bf Heading1} & \multicolumn{4}{|l|}{\bf Heading2}\\ \hline
-%$cell1 row1$ & cell2 row 1 & cell3 row 1 & cell4 row 1 & cell5 row 1 & cell6 row 1 & cell7 row 1 & cell8 row 1\\ \hline
-%$cell1 row2$ & cell2 row 2 & cell3 row 2 & cell4 row 2 & cell5 row 2 & cell6 row 2 & cell7 row 2 & cell8 row 2\\ \hline
-%$cell1 row3$ & cell2 row 3 & cell3 row 3 & cell4 row 3 & cell5 row 3 & cell6 row 3 & cell7 row 3 & cell8 row 3\\ \hline
-%\end{tabular}
-%\begin{flushleft} Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed.
-%\end{flushleft}
-%\label{table1}
-%\end{adjustwidth}
-%\end{table}
-
-
-
-%\subsection*{\lorem\ and \ipsum\ Nunc blandit a tortor.}
-
-
-% Please do not create a heading level below \subsection. For 3rd level headings, use \paragraph{}. 
-
 \section*{Discussion}
 
 Our analyses of tandem repeats in grasses provides insight into the evolution of genome organization.
 Most importantly, we show that previous assumptions about repeat abundance and function do not hold within all taxa examined in this study.
 Genomic abundance was not predictive of centromere localization within the three novel repeats that were examined through FISH (FIG).
-FISH from the de novo constructed repeat of \emph{Urelytrum} showed a clustered distribution (how do i explain this better?), but it was not present on all chromosomes.
+FISH from the de novo constructed repeat of \emph{Urelytrum} showed a strong spatial clustering, but clusters were not present on all chromosomes and appeared to be associated with chromosome ends as might be expected from telomeric sequence.\jri{is that legit? wouldn't telomere sequence be on both ends? what shows up on only one end? knobs?}
 It is possible that \emph{Urelytrum} has multiple centromere repeats and that the tandem repeat we probed is specific to only a few chromosomes.
 The \emph{Hyparrhenia} tandem repeat is widely dispersed across the genome, a pattern we would expect from a TE rather than a tandem repeat.
 The \emph{Arundinella} repeat shows a (clustered pattern, suggesting we correctly identified a tandem repeat, though the presence of multiple, distant clusters on one chromosome indicates it may not be centromeric).
 In all other cases, the highest abundance tandem repeat was homologous to a known repeat.
-(do i want to go into detail about how those group up and whether they are centromeric here? Maybe a figure of homology between each ranking?)
+(do i want to go into detail about how those group up and whether they are centromeric here? Maybe a figure of homology between each ranking?) \jri{i like the idea of a figure. FISH and homology results should be in results not here.}
 
-De novo assembly of tandem repeats is also an efficient, low cost opportunity to explore repetitive content in non-model genomes, an area of study generally left untouched due to the difficulties of traditional assembly.
+De novo assembly of tandem repeats is an efficient, low cost opportunity to explore repetitive content in non-model genomes, an area of study generally left untouched due to the difficulties of traditional assembly.
 In the assembly of the \emph{Arundinella} repeats, we show an example of how de novo assembly of tandem repeats can add to evolutionary biology.
 \emph{Arundinella}, basal to all other species in this study, has two highly abundant tandem repeats that are unique over their full length.
 However, the most abundant 180bp repeats shares long regions of homology to both the sorghum and maize centromere repeat.
-The ability to look broadly across a phylogeny at consensus repeats may provide a glimpse into the ancestral condition of tandem repeats of andropogonaeae; tandem repeats that gave rise to the structurally important centromere repeats of maize and sorghum.
-While far from sufficient to make evolutionary claims about the origin of functionally important tandem repeats, the identification of novel repeats in previously unstudied organisms has the potential to bring a large volume of data to comparative genomics.
+The ability to look broadly across a phylogeny at consensus repeats may provide a glimpse into the ancestral condition of tandem repeats of andropogonaeae; tandem repeats that gave rise to the structurally important centromere repeats of maize and sorghum.\jri{this is a bold claim. any evidence?}
+While far from sufficient to make evolutionary claims about the origin of functionally important tandem repeats \jri{wait you just did}, the identification of novel repeats in previously unstudied organisms has the potential to bring a large volume of data to comparative genomics.\jri{lame sentence. bring a lotta data? big deal.}
 Using consensus tandem repeats, evolutionary biologists can begin to piece together sequence turnover in repetitive regions (CITE) and inform the ways in which these heterochromatic regions of the genome evolve.
 
 The methods presented here can also be applied to study variation in genomic composition within and between species.
