@@ -15,7 +15,14 @@ ggplot(data.m, aes(Taxa, value)) +
   geom_bar(aes(fill = Rank), position = "dodge", stat="identity") + labs(y="Percent Genomic Composition")
 
 data2 <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_totals.csv")
-ggplot(data2, aes(Taxa, Total))+ geom_bar(aes(fill = Taxa),stat="identity") +labs(x="",y="Tandem Repeat Content")+theme(axis.ticks = element_blank(), axis.text.x = element_blank())
+ggplot(data2, aes(Taxa, Total))+ geom_bar(aes(fill = Taxa),stat="identity") +labs(x="",y="Tandem Repeat Content")+theme(axis.ticks = element_blank(), axis.text.x = element_blank())+theme_bw()
+
+data2 <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_totals2.csv")
+data2 <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_totals2.csv")
+data2$Taxa <- factor(data2$Taxa, levels=data2$Taxa)
+ggplot(data2, aes(Taxa, Total))+ geom_bar(stat="identity") +labs(x="",y="Tandem Repeat Content")
++theme(axis.ticks = element_blank(), axis.text.x = element_blank())
+
 ```
 
 

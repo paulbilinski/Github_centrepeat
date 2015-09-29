@@ -498,7 +498,7 @@ cat unranked | sort -t ',' -k2,2rn > rankedosat.csv
 And thats it.
 
 
-
+Wait, no its not.  Doing one more analysis to show homology between top 4 contigs.
 
 
 

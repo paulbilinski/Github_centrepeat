@@ -1,0 +1,657 @@
+# BLASTN 2.2.28+
+# Query: anepalonecontig_>anepaltestassemblies569
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	100.00	1108	0	0	1	1108	1	1108	0.0	1999
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	96.65	925	27	4	186	1108	1	923	0.0	1514
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	96.65	925	27	4	1	923	186	1108	0.0	1514
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	97.57	740	16	2	370	1108	1	739	0.0	1247
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	97.57	740	16	2	1	739	370	1108	0.0	1247
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	96.75	554	18	0	555	1108	1	554	0.0	 919
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	96.75	554	18	0	1	554	555	1108	0.0	 919
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	96.76	370	10	2	740	1108	1	369	7e-176	 607
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	96.76	370	10	2	1	369	740	1108	7e-176	 607
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	95.14	185	9	0	924	1108	1	185	2e-81	 293
+anepalonecontig_>anepaltestassemblies569	anepalonecontig_>anepaltestassemblies569	95.14	185	9	0	1	185	924	1108	2e-81	 293
+# BLASTN 2.2.28+
+# Query: apludaonecontig_>apludatestassemblies125
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+apludaonecontig_>apludatestassemblies125	apludaonecontig_>apludatestassemblies125	100.00	414	0	0	1	414	1	414	0.0	 747
+apludaonecontig_>apludatestassemblies125	apludaonecontig_>apludatestassemblies125	100.00	276	0	0	139	414	1	276	1e-143	 499
+apludaonecontig_>apludatestassemblies125	apludaonecontig_>apludatestassemblies125	100.00	276	0	0	1	276	139	414	1e-143	 499
+apludaonecontig_>apludatestassemblies125	apludaonecontig_>apludatestassemblies125	100.00	138	0	0	277	414	1	138	8e-69	 250
+apludaonecontig_>apludatestassemblies125	apludaonecontig_>apludatestassemblies125	100.00	138	0	0	1	138	277	414	8e-69	 250
+apludaonecontig_>apludatestassemblies125	sorghonecontig_>sorghtestassemblies57	70.59	391	107	8	5	393	35	419	4e-41	 158
+apludaonecontig_>apludatestassemblies125	sorghonecontig_>sorghtestassemblies57	71.33	286	77	5	109	393	1	282	2e-32	 129
+apludaonecontig_>apludatestassemblies125	sorghonecontig_>sorghtestassemblies57	72.11	147	39	2	247	393	1	145	1e-15	73.4
+apludaonecontig_>apludatestassemblies125	anepalfourcontig_>anepaltestassemblies1144	71.08	83	23	1	29	111	17	98	3e-05	39.2
+apludaonecontig_>apludatestassemblies125	anepalfourcontig_>anepaltestassemblies1144	71.08	83	23	1	167	249	17	98	3e-05	39.2
+apludaonecontig_>apludatestassemblies125	anepalfourcontig_>anepaltestassemblies1144	71.08	83	23	1	305	387	17	98	3e-05	39.2
+# BLASTN 2.2.28+
+# Query: hypdiponecontig_>hypdiptestassemblies314
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 35 hits found
+hypdiponecontig_>hypdiptestassemblies314	hypdiponecontig_>hypdiptestassemblies314	100.00	470	0	0	1	470	1	470	0.0	 848
+hypdiponecontig_>hypdiptestassemblies314	hypdiponecontig_>hypdiptestassemblies314	96.50	314	10	1	158	470	1	314	5e-148	 513
+hypdiponecontig_>hypdiptestassemblies314	hypdiponecontig_>hypdiptestassemblies314	96.50	314	10	1	1	314	158	470	5e-148	 513
+hypdiponecontig_>hypdiptestassemblies314	hypdiponecontig_>hypdiptestassemblies314	95.54	157	6	1	315	470	1	157	3e-68	 248
+hypdiponecontig_>hypdiptestassemblies314	hypdiponecontig_>hypdiptestassemblies314	95.54	157	6	1	1	157	315	470	3e-68	 248
+hypdiponecontig_>hypdiptestassemblies314	apludatwocontig_>apludatestassemblies288	66.02	359	97	12	2	351	224	566	2e-13	66.2
+hypdiponecontig_>hypdiptestassemblies314	apludatwocontig_>apludatestassemblies288	67.14	350	95	15	2	345	73	408	7e-13	64.4
+hypdiponecontig_>hypdiptestassemblies314	apludatwocontig_>apludatestassemblies288	67.95	259	70	10	97	351	10	259	9e-12	60.8
+hypdiponecontig_>hypdiptestassemblies314	apludatwocontig_>apludatestassemblies288	65.18	359	100	11	2	351	378	720	1e-10	57.2
+hypdiponecontig_>hypdiptestassemblies314	apludatwocontig_>apludatestassemblies288	66.67	195	58	5	2	194	531	720	2e-06	42.8
+hypdiponecontig_>hypdiptestassemblies314	apludatwocontig_>apludatestassemblies288	80.56	36	7	0	2	37	685	720	0.001	33.7
+hypdiponecontig_>hypdiptestassemblies314	tlaxtwocontig_>tlaxtestassemblies256	100.00	16	0	0	315	330	112	97	0.015	30.1
+hypdiponecontig_>hypdiptestassemblies314	tlaxtwocontig_>tlaxtestassemblies256	100.00	16	0	0	158	173	112	97	0.015	30.1
+hypdiponecontig_>hypdiptestassemblies314	tlaxtwocontig_>tlaxtestassemblies256	100.00	16	0	0	1	16	112	97	0.015	30.1
+hypdiponecontig_>hypdiptestassemblies314	tlaxtwocontig_>tlaxtestassemblies256	100.00	15	0	0	316	330	267	253	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tlaxtwocontig_>tlaxtestassemblies256	100.00	15	0	0	159	173	267	253	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tlaxtwocontig_>tlaxtestassemblies256	100.00	15	0	0	2	16	267	253	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tlaxtwocontig_>tlaxtestassemblies256	100.00	15	0	0	316	330	423	409	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tlaxtwocontig_>tlaxtestassemblies256	100.00	15	0	0	159	173	423	409	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tlaxtwocontig_>tlaxtestassemblies256	100.00	15	0	0	2	16	423	409	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tperutwocontig_>tperutestassemblies111	100.00	15	0	0	2	16	14	28	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tperutwocontig_>tperutestassemblies111	100.00	15	0	0	159	173	14	28	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tperutwocontig_>tperutestassemblies111	100.00	15	0	0	316	330	14	28	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tdacttwocontig_>tdacttestassemblies1129	100.00	15	0	0	316	330	120	106	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tdacttwocontig_>tdacttestassemblies1129	100.00	15	0	0	159	173	120	106	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tdacttwocontig_>tdacttestassemblies1129	100.00	15	0	0	2	16	120	106	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tdacttwocontig_>tdacttestassemblies1129	100.00	15	0	0	316	330	276	262	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tdacttwocontig_>tdacttestassemblies1129	100.00	15	0	0	159	173	276	262	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tdacttwocontig_>tdacttestassemblies1129	100.00	15	0	0	2	16	276	262	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tdacttwocontig_>tdacttestassemblies1129	100.00	15	0	0	316	330	588	574	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tdacttwocontig_>tdacttestassemblies1129	100.00	15	0	0	159	173	588	574	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tdacttwocontig_>tdacttestassemblies1129	100.00	15	0	0	2	16	588	574	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tandertwocontig_>tandertestassemblies510	100.00	15	0	0	2	16	62	76	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tandertwocontig_>tandertestassemblies510	100.00	15	0	0	159	173	62	76	0.054	28.3
+hypdiponecontig_>hypdiptestassemblies314	tandertwocontig_>tandertestassemblies510	100.00	15	0	0	316	330	62	76	0.054	28.3
+# BLASTN 2.2.28+
+# Query: isrugonecontig_>isrugtestassemblies2554
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 16 hits found
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	100.00	690	0	0	1	690	1	690	0.0	1245
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	94.78	402	18	3	187	586	1	401	7e-180	 619
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	94.78	402	18	3	1	401	187	586	7e-180	 619
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	91.71	217	17	1	372	587	1	217	6e-86	 307
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	91.71	217	17	1	1	217	372	587	6e-86	 307
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	83.85	161	21	4	518	673	8	168	2e-41	 159
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	83.85	161	21	4	8	168	518	673	2e-41	 159
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	82.95	88	12	2	589	673	267	354	3e-19	86.0
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	82.95	88	12	2	267	354	589	673	3e-19	86.0
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	78.41	88	16	2	589	673	452	539	9e-14	68.0
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	78.41	88	16	2	452	539	589	673	9e-14	68.0
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	88.64	44	3	2	147	188	8	51	2e-08	50.0
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	88.64	44	2	3	333	373	8	51	3e-07	46.4
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	87.10	31	3	1	558	587	1	31	5e-04	35.6
+isrugonecontig_>isrugtestassemblies2554	isrugonecontig_>isrugtestassemblies2554	87.10	31	3	1	1	31	558	587	5e-04	35.6
+isrugonecontig_>isrugtestassemblies2554	sorghonecontig_>sorghtestassemblies57	74.00	100	25	1	457	556	452	550	1e-11	60.8
+# BLASTN 2.2.28+
+# Query: mzonecontig_>mztestassemblies58
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 67 hits found
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	100.00	922	0	0	1	922	1	922	0.0	1663
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	93.25	741	47	2	182	921	2	740	0.0	1104
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	93.25	741	47	2	2	740	182	921	0.0	1104
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	92.87	561	38	2	362	921	2	561	0.0	 825
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	92.87	561	38	2	2	561	362	921	0.0	 825
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	92.39	381	27	2	542	921	2	381	1e-158	 549
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	92.39	381	27	2	2	381	542	921	1e-158	 549
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	89.11	202	19	3	721	921	2	201	4e-70	 255
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	89.11	202	19	3	2	201	721	921	4e-70	 255
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	100.00	21	0	0	901	921	1	21	6e-05	39.2
+mzonecontig_>mztestassemblies58	mzonecontig_>mztestassemblies58	100.00	21	0	0	1	21	901	921	6e-05	39.2
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	94.58	922	45	5	2	921	139	1057	0.0	1420
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	93.60	922	54	5	2	921	319	1237	0.0	1379
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	94.88	879	42	3	44	921	1	877	0.0	1371
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	95.01	762	36	2	2	762	499	1259	0.0	1196
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	94.42	699	36	3	224	921	1	697	0.0	1074
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	95.53	582	26	0	2	583	678	1259	0.0	 933
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	93.26	519	32	3	404	921	1	517	0.0	 767
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	93.53	402	26	0	2	403	858	1259	2e-176	 609
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	92.04	339	25	2	584	921	1	338	2e-138	 482
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	93.69	222	14	0	2	223	1038	1259	5e-95	 338
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	88.68	159	17	1	763	921	1	158	2e-54	 203
+mzonecontig_>mztestassemblies58	tanderonecontig_>tandertestassemblies77	90.24	41	4	0	3	43	1219	1259	2e-10	57.2
+mzonecontig_>mztestassemblies58	tlaxonecontig_>tlaxtestassemblies696	95.83	720	27	3	120	838	718	1	0.0	1153
+mzonecontig_>mztestassemblies58	tlaxonecontig_>tlaxtestassemblies696	96.20	658	23	2	2	659	656	1	0.0	1067
+mzonecontig_>mztestassemblies58	tlaxonecontig_>tlaxtestassemblies696	93.74	623	35	4	300	921	718	99	0.0	 933
+mzonecontig_>mztestassemblies58	tlaxonecontig_>tlaxtestassemblies696	96.86	478	15	0	2	479	478	1	0.0	 794
+mzonecontig_>mztestassemblies58	tlaxonecontig_>tlaxtestassemblies696	92.76	442	30	2	480	921	718	279	0.0	 646
+mzonecontig_>mztestassemblies58	tlaxonecontig_>tlaxtestassemblies696	96.64	298	10	0	2	299	298	1	9e-142	 493
+mzonecontig_>mztestassemblies58	tlaxonecontig_>tlaxtestassemblies696	90.49	263	21	3	660	921	718	459	2e-99	 352
+mzonecontig_>mztestassemblies58	tlaxonecontig_>tlaxtestassemblies696	94.07	118	7	0	2	119	118	1	8e-48	 181
+mzonecontig_>mztestassemblies58	tlaxonecontig_>tlaxtestassemblies696	86.75	83	9	2	839	921	718	638	3e-21	93.3
+mzonecontig_>mztestassemblies58	zpertwocontig_>zpertestassemblies231	95.55	719	30	2	149	867	1	717	0.0	1146
+mzonecontig_>mztestassemblies58	zpertwocontig_>zpertestassemblies231	96.22	687	23	3	2	688	34	717	0.0	1112
+mzonecontig_>mztestassemblies58	zpertwocontig_>zpertestassemblies231	93.43	594	34	4	329	921	1	590	0.0	 883
+mzonecontig_>mztestassemblies58	zpertwocontig_>zpertestassemblies231	96.06	507	17	3	2	508	214	717	0.0	 814
+mzonecontig_>mztestassemblies58	zpertwocontig_>zpertestassemblies231	92.96	412	26	3	511	921	3	412	3e-174	 601
+mzonecontig_>mztestassemblies58	zpertwocontig_>zpertestassemblies231	96.02	327	11	2	2	328	393	717	6e-151	 524
+mzonecontig_>mztestassemblies58	zpertwocontig_>zpertestassemblies231	90.95	232	19	2	691	921	3	233	1e-88	 316
+mzonecontig_>mztestassemblies58	zpertwocontig_>zpertestassemblies231	95.24	147	7	0	2	148	571	717	1e-63	 233
+mzonecontig_>mztestassemblies58	zpertwocontig_>zpertestassemblies231	90.20	51	4	1	871	921	4	53	4e-13	66.2
+mzonecontig_>mztestassemblies58	tdactonecontig_>tdacttestassemblies110	96.81	533	17	0	107	639	535	3	0.0	 884
+mzonecontig_>mztestassemblies58	tdactonecontig_>tdacttestassemblies110	94.59	536	28	1	282	816	540	5	0.0	 832
+mzonecontig_>mztestassemblies58	tdactonecontig_>tdacttestassemblies110	96.07	458	18	0	2	459	460	3	0.0	 746
+mzonecontig_>mztestassemblies58	tdactonecontig_>tdacttestassemblies110	92.19	461	34	2	462	921	540	81	0.0	 663
+mzonecontig_>mztestassemblies58	tdactonecontig_>tdacttestassemblies110	95.68	278	12	0	2	279	280	3	3e-128	 448
+mzonecontig_>mztestassemblies58	tdactonecontig_>tdacttestassemblies110	90.22	276	25	2	647	921	535	261	3e-104	 369
+mzonecontig_>mztestassemblies58	tdactonecontig_>tdacttestassemblies110	93.88	98	6	0	2	99	100	3	1e-38	 150
+mzonecontig_>mztestassemblies58	tdactonecontig_>tdacttestassemblies110	89.11	101	10	1	821	921	540	441	4e-32	 129
+mzonecontig_>mztestassemblies58	tfloronecontig_>tflortestassemblies1561	95.00	540	24	3	49	588	537	1	0.0	 841
+mzonecontig_>mztestassemblies58	tfloronecontig_>tflortestassemblies1561	94.26	540	27	4	229	767	537	1	0.0	 820
+mzonecontig_>mztestassemblies58	tfloronecontig_>tflortestassemblies1561	91.81	513	37	5	410	921	536	28	0.0	 719
+mzonecontig_>mztestassemblies58	tfloronecontig_>tflortestassemblies1561	95.33	407	16	3	2	408	404	1	0.0	 637
+mzonecontig_>mztestassemblies58	tfloronecontig_>tflortestassemblies1561	89.25	335	29	6	589	921	537	208	5e-120	 421
+mzonecontig_>mztestassemblies58	tfloronecontig_>tflortestassemblies1561	95.15	227	10	1	2	228	226	1	2e-100	 356
+mzonecontig_>mztestassemblies58	tfloronecontig_>tflortestassemblies1561	85.06	154	21	2	768	921	537	386	2e-43	 167
+mzonecontig_>mztestassemblies58	tfloronecontig_>tflortestassemblies1561	91.67	48	4	0	1	48	48	1	4e-14	69.8
+mzonecontig_>mztestassemblies58	tperuonecontig_>tperutestassemblies12	97.22	360	9	1	61	420	1	359	3e-174	 601
+mzonecontig_>mztestassemblies58	tperuonecontig_>tperutestassemblies12	96.94	360	10	1	241	600	1	359	1e-172	 596
+mzonecontig_>mztestassemblies58	tperuonecontig_>tperutestassemblies12	95.56	360	13	3	421	779	1	358	5e-164	 567
+mzonecontig_>mztestassemblies58	tperuonecontig_>tperutestassemblies12	91.30	322	25	3	601	921	1	320	4e-127	 444
+mzonecontig_>mztestassemblies58	tperuonecontig_>tperutestassemblies12	95.82	239	9	1	2	240	122	359	1e-108	 383
+mzonecontig_>mztestassemblies58	tperuonecontig_>tperutestassemblies12	90.07	141	13	1	781	921	2	141	5e-50	 188
+mzonecontig_>mztestassemblies58	tperuonecontig_>tperutestassemblies12	91.38	58	4	1	2	59	302	358	7e-17	78.8
+mzonecontig_>mztestassemblies58	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	232	248	561	577	0.009	31.9
+mzonecontig_>mztestassemblies58	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	412	428	561	577	0.009	31.9
+mzonecontig_>mztestassemblies58	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	592	608	561	577	0.009	31.9
+# BLASTN 2.2.28+
+# Query: osatonecontig_>osattestassemblies261
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 21 hits found
+osatonecontig_>osattestassemblies261	osatonecontig_>osattestassemblies261	100.00	613	0	0	1	613	1	613	0.0	1106
+osatonecontig_>osattestassemblies261	osatonecontig_>osattestassemblies261	92.04	465	28	8	155	613	1	462	0.0	 645
+osatonecontig_>osattestassemblies261	osatonecontig_>osattestassemblies261	92.04	465	28	8	1	462	155	613	0.0	 645
+osatonecontig_>osattestassemblies261	osatonecontig_>osattestassemblies261	90.32	310	23	6	309	613	1	308	9e-115	 403
+osatonecontig_>osattestassemblies261	osatonecontig_>osattestassemblies261	90.32	310	23	6	1	308	309	613	9e-115	 403
+osatonecontig_>osattestassemblies261	osatonecontig_>osattestassemblies261	90.91	154	9	4	463	612	1	153	5e-54	 201
+osatonecontig_>osattestassemblies261	osatonecontig_>osattestassemblies261	90.91	154	9	4	1	153	463	612	5e-54	 201
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	76.47	85	17	2	502	583	220	304	1e-10	57.2
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	76.47	85	17	2	502	583	681	765	1e-10	57.2
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	66.11	416	88	24	194	583	69	457	5e-10	55.4
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	75.00	84	19	1	502	583	69	152	5e-10	55.4
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	75.28	89	19	3	194	280	220	307	6e-09	51.8
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	74.47	94	18	4	25	112	202	295	2e-08	50.0
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	77.61	67	14	1	502	567	527	593	2e-08	50.0
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	75.58	86	18	3	194	277	681	765	2e-08	50.0
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	75.00	76	16	2	40	112	681	756	3e-07	46.4
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	75.00	76	17	2	194	267	374	449	9e-07	44.6
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	74.67	75	17	2	40	112	69	143	3e-06	42.8
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	73.26	86	18	3	40	122	374	457	3e-06	42.8
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	77.19	57	12	1	194	249	527	583	1e-05	41.0
+osatonecontig_>osattestassemblies261	apludatwocontig_>apludatestassemblies288	75.44	57	12	1	40	94	527	583	1e-04	37.4
+# BLASTN 2.2.28+
+# Query: phyloonecontig_>phylotestassemblies114
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 15 hits found
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	100.00	1155	0	0	1	1155	1	1155	0.0	2084
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	88.77	1015	106	8	145	1155	1	1011	0.0	1288
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	88.77	1015	106	8	1	1011	145	1155	0.0	1288
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	89.31	870	86	7	290	1155	1	867	0.0	1124
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	89.31	870	86	7	1	867	290	1155	0.0	1124
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	89.61	722	68	7	435	1152	1	719	0.0	 939
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	89.61	722	68	7	1	719	435	1152	0.0	 939
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	88.39	577	62	5	578	1152	1	574	0.0	 720
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	88.39	577	62	5	1	574	578	1152	0.0	 720
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	87.21	430	52	3	723	1150	1	429	1e-148	 517
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	87.21	430	52	3	1	429	723	1150	1e-148	 517
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	85.81	289	40	1	868	1155	1	289	2e-93	 333
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	85.81	289	40	1	1	289	868	1155	2e-93	 333
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	83.80	142	21	2	1012	1152	1	141	7e-37	 145
+phyloonecontig_>phylotestassemblies114	phyloonecontig_>phylotestassemblies114	83.80	142	21	2	1	141	1012	1152	7e-37	 145
+# BLASTN 2.2.28+
+# Query: sorghonecontig_>sorghtestassemblies57
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 18 hits found
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	100.00	820	0	0	1	820	1	820	0.0	1480
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	86.14	541	73	2	274	813	1	540	0.0	 630
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	86.14	541	73	2	1	540	274	813	0.0	 630
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	88.68	265	30	0	553	817	6	270	1e-96	 343
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	88.68	265	30	0	6	270	553	817	1e-96	 343
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	70.76	684	197	3	137	819	1	682	3e-90	 322
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	70.76	684	197	3	1	682	137	819	3e-90	 322
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	69.51	410	123	2	411	819	1	409	4e-44	 168
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	69.51	410	123	2	1	409	411	819	4e-44	 168
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	77.66	94	20	1	723	816	40	132	9e-15	71.6
+sorghonecontig_>sorghtestassemblies57	sorghonecontig_>sorghtestassemblies57	77.66	94	20	1	40	132	723	816	9e-15	71.6
+sorghonecontig_>sorghtestassemblies57	apludaonecontig_>apludatestassemblies125	70.59	391	107	8	35	419	5	393	8e-41	 158
+sorghonecontig_>sorghtestassemblies57	apludaonecontig_>apludatestassemblies125	71.33	286	77	5	1	282	109	393	4e-32	 129
+sorghonecontig_>sorghtestassemblies57	apludaonecontig_>apludatestassemblies125	68.98	245	69	6	578	817	1	243	6e-17	78.8
+sorghonecontig_>sorghtestassemblies57	apludaonecontig_>apludatestassemblies125	72.11	147	39	2	1	145	247	393	3e-15	73.4
+sorghonecontig_>sorghtestassemblies57	anepalfourcontig_>anepaltestassemblies1144	72.48	109	30	0	176	284	204	312	5e-12	62.6
+sorghonecontig_>sorghtestassemblies57	anepalfourcontig_>anepaltestassemblies1144	76.92	78	18	0	742	819	223	300	2e-11	60.8
+sorghonecontig_>sorghtestassemblies57	isrugonecontig_>isrugtestassemblies2554	74.00	100	25	1	452	550	457	556	2e-11	60.8
+# BLASTN 2.2.28+
+# Query: tanderonecontig_>tandertestassemblies77
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 84 hits found
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	100.00	1259	0	0	1	1259	1	1259	0.0	2271
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	96.85	1080	32	2	181	1259	1	1079	0.0	1788
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	96.85	1080	32	2	1	1079	181	1259	0.0	1788
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	96.89	900	26	2	361	1259	1	899	0.0	1490
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	96.89	900	26	2	1	899	361	1259	0.0	1490
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	97.08	720	20	1	540	1259	1	719	0.0	1200
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	97.08	720	20	1	1	719	540	1259	0.0	1200
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	96.85	540	16	1	720	1259	1	539	0.0	 893
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	96.85	540	16	1	1	539	720	1259	0.0	 893
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	96.67	360	12	0	900	1259	1	360	1e-172	 596
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	96.67	360	12	0	1	360	900	1259	1e-172	 596
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	97.78	180	4	0	1080	1259	1	180	1e-85	 307
+tanderonecontig_>tandertestassemblies77	tanderonecontig_>tandertestassemblies77	97.78	180	4	0	1	180	1080	1259	1e-85	 307
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	94.58	922	45	5	139	1057	2	921	0.0	1420
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	93.60	922	54	5	319	1237	2	921	0.0	1379
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	94.88	879	42	3	1	877	44	921	0.0	1371
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	95.01	762	36	2	499	1259	2	762	0.0	1196
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	94.42	699	36	3	1	697	224	921	0.0	1074
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	95.53	582	26	0	678	1259	2	583	0.0	 933
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	93.26	519	32	3	1	517	404	921	0.0	 767
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	93.53	402	26	0	858	1259	2	403	2e-176	 609
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	92.04	339	25	2	1	338	584	921	2e-138	 482
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	93.69	222	14	0	1038	1259	2	223	6e-95	 338
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	88.68	159	17	1	1	158	763	921	3e-54	 203
+tanderonecontig_>tandertestassemblies77	mzonecontig_>mztestassemblies58	90.24	41	4	0	1219	1259	3	43	3e-10	57.2
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	98.75	720	6	3	77	795	718	1	0.0	1247
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	98.06	720	11	3	257	975	718	1	0.0	1225
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	97.36	719	18	1	437	1155	718	1	0.0	1207
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	99.35	616	2	2	1	615	615	1	0.0	1086
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	96.89	644	18	2	616	1259	718	77	0.0	1065
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	99.54	436	2	0	1	436	436	1	0.0	 778
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	96.55	464	14	2	796	1259	718	257	0.0	 758
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	100.00	256	0	0	1	256	256	1	2e-132	 462
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	95.42	284	11	2	976	1259	718	437	2e-127	 446
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	96.15	104	3	1	1156	1259	718	616	2e-43	 167
+tanderonecontig_>tandertestassemblies77	tlaxonecontig_>tlaxtestassemblies696	100.00	76	0	0	1	76	76	1	1e-34	 138
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	98.06	720	10	4	106	824	1	717	0.0	1222
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	97.22	720	16	4	286	1004	1	717	0.0	1195
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	96.94	720	18	4	466	1184	1	717	0.0	1186
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	98.45	645	6	4	1	644	76	717	0.0	1104
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	96.26	615	20	3	645	1259	1	612	0.0	 994
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	98.28	465	5	3	1	465	256	717	0.0	 792
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	95.86	435	17	1	825	1259	1	434	0.0	 700
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	98.60	285	2	2	1	285	435	717	2e-140	 489
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	96.47	255	9	0	1005	1259	1	255	2e-119	 419
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	99.05	105	1	0	1	105	613	717	9e-49	 185
+tanderonecontig_>tandertestassemblies77	zpertwocontig_>zpertestassemblies231	98.63	73	1	0	1187	1259	3	75	2e-31	 127
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	99.07	538	4	1	59	595	540	3	0.0	 944
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	98.51	538	7	1	239	775	540	3	0.0	 931
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	97.59	540	12	1	419	957	540	1	0.0	 911
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	96.65	538	18	0	598	1135	540	3	0.0	 890
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	96.68	482	16	0	778	1259	540	59	0.0	 798
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	99.04	418	4	0	1	418	418	1	0.0	 737
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	96.03	302	12	0	958	1259	540	239	4e-141	 491
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	99.15	236	2	0	1	236	238	3	8e-119	 417
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	97.52	121	3	0	1139	1259	539	419	9e-55	 205
+tanderonecontig_>tandertestassemblies77	tdactonecontig_>tdacttestassemblies110	98.21	56	1	0	1	56	58	3	3e-22	96.9
+tanderonecontig_>tandertestassemblies77	tfloronecontig_>tflortestassemblies1561	97.22	539	13	2	186	724	537	1	0.0	 897
+tanderonecontig_>tandertestassemblies77	tfloronecontig_>tflortestassemblies1561	97.41	540	10	4	6	544	537	1	0.0	 897
+tanderonecontig_>tandertestassemblies77	tfloronecontig_>tflortestassemblies1561	96.66	539	16	2	366	904	537	1	0.0	 884
+tanderonecontig_>tandertestassemblies77	tfloronecontig_>tflortestassemblies1561	95.19	540	23	3	545	1084	537	1	0.0	 847
+tanderonecontig_>tandertestassemblies77	tfloronecontig_>tflortestassemblies1561	94.95	535	24	3	725	1259	537	6	0.0	 832
+tanderonecontig_>tandertestassemblies77	tfloronecontig_>tflortestassemblies1561	98.90	365	2	2	1	365	363	1	0.0	 634
+tanderonecontig_>tandertestassemblies77	tfloronecontig_>tflortestassemblies1561	93.52	355	20	3	905	1259	537	186	2e-151	 526
+tanderonecontig_>tandertestassemblies77	tfloronecontig_>tflortestassemblies1561	99.46	185	1	0	1	185	185	1	3e-92	 329
+tanderonecontig_>tandertestassemblies77	tfloronecontig_>tflortestassemblies1561	93.14	175	11	1	1085	1259	537	364	5e-71	 259
+tanderonecontig_>tandertestassemblies77	tperuonecontig_>tperutestassemblies12	99.72	359	1	0	198	556	1	359	0.0	 643
+tanderonecontig_>tandertestassemblies77	tperuonecontig_>tperutestassemblies12	99.72	360	0	1	18	377	1	359	0.0	 641
+tanderonecontig_>tandertestassemblies77	tperuonecontig_>tperutestassemblies12	98.33	360	4	2	378	736	1	359	2e-178	 616
+tanderonecontig_>tandertestassemblies77	tperuonecontig_>tperutestassemblies12	98.04	358	6	1	557	914	1	357	7e-177	 610
+tanderonecontig_>tandertestassemblies77	tperuonecontig_>tperutestassemblies12	96.39	360	12	1	737	1096	1	359	8e-170	 587
+tanderonecontig_>tandertestassemblies77	tperuonecontig_>tperutestassemblies12	96.50	343	11	1	917	1259	1	342	3e-162	 562
+tanderonecontig_>tandertestassemblies77	tperuonecontig_>tperutestassemblies12	99.49	197	0	1	1	197	164	359	1e-97	 347
+tanderonecontig_>tandertestassemblies77	tperuonecontig_>tperutestassemblies12	98.16	163	3	0	1097	1259	1	163	1e-77	 280
+tanderonecontig_>tandertestassemblies77	tperuonecontig_>tperutestassemblies12	100.00	17	0	0	1	17	343	359	0.012	31.9
+tanderonecontig_>tandertestassemblies77	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	1088	1104	16	32	0.012	31.9
+tanderonecontig_>tandertestassemblies77	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	1088	1104	198	214	0.012	31.9
+tanderonecontig_>tandertestassemblies77	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	1088	1104	380	396	0.012	31.9
+tanderonecontig_>tandertestassemblies77	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	9	25	561	577	0.012	31.9
+tanderonecontig_>tandertestassemblies77	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	189	205	561	577	0.012	31.9
+tanderonecontig_>tandertestassemblies77	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	369	385	561	577	0.012	31.9
+tanderonecontig_>tandertestassemblies77	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	548	564	561	577	0.012	31.9
+tanderonecontig_>tandertestassemblies77	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	728	744	561	577	0.012	31.9
+tanderonecontig_>tandertestassemblies77	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	1088	1104	1106	1122	0.012	31.9
+# BLASTN 2.2.28+
+# Query: tdactonecontig_>tdacttestassemblies110
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 63 hits found
+tdactonecontig_>tdacttestassemblies110	tdactonecontig_>tdacttestassemblies110	100.00	540	0	0	1	540	1	540	0.0	 975
+tdactonecontig_>tdacttestassemblies110	tdactonecontig_>tdacttestassemblies110	98.89	360	4	0	181	540	1	360	0.0	 632
+tdactonecontig_>tdacttestassemblies110	tdactonecontig_>tdacttestassemblies110	98.89	360	4	0	1	360	181	540	0.0	 632
+tdactonecontig_>tdacttestassemblies110	tdactonecontig_>tdacttestassemblies110	98.89	180	2	0	361	540	1	180	9e-89	 316
+tdactonecontig_>tdacttestassemblies110	tdactonecontig_>tdacttestassemblies110	98.89	180	2	0	1	180	361	540	9e-89	 316
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	99.07	538	4	1	3	540	595	59	0.0	 944
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	98.51	538	7	1	3	540	775	239	0.0	 931
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	97.59	540	12	1	1	540	957	419	0.0	 911
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	96.65	538	18	0	3	540	1135	598	0.0	 890
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	96.68	482	16	0	59	540	1259	778	0.0	 798
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	99.04	418	4	0	1	418	418	1	0.0	 737
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	96.03	302	12	0	239	540	1259	958	2e-141	 491
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	99.15	236	2	0	3	238	236	1	3e-119	 417
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	97.52	121	3	0	419	539	1259	1139	4e-55	 205
+tdactonecontig_>tdacttestassemblies110	tanderonecontig_>tandertestassemblies77	98.21	56	1	0	3	58	56	1	1e-22	96.9
+tdactonecontig_>tdacttestassemblies110	tlaxonecontig_>tlaxtestassemblies696	98.70	538	6	1	3	540	21	557	0.0	 935
+tdactonecontig_>tdacttestassemblies110	tlaxonecontig_>tlaxtestassemblies696	98.27	520	7	2	3	522	201	718	0.0	 890
+tdactonecontig_>tdacttestassemblies110	tlaxonecontig_>tlaxtestassemblies696	98.68	378	5	0	163	540	1	378	0.0	 659
+tdactonecontig_>tdacttestassemblies110	tlaxonecontig_>tlaxtestassemblies696	98.53	340	3	2	3	342	381	718	4e-169	 583
+tdactonecontig_>tdacttestassemblies110	tlaxonecontig_>tlaxtestassemblies696	98.99	198	2	0	343	540	1	198	1e-98	 349
+tdactonecontig_>tdacttestassemblies110	tlaxonecontig_>tlaxtestassemblies696	98.12	160	2	1	3	162	560	718	3e-75	 271
+tdactonecontig_>tdacttestassemblies110	tlaxonecontig_>tlaxtestassemblies696	100.00	18	0	0	523	540	1	18	0.001	33.7
+tdactonecontig_>tdacttestassemblies110	zpertwocontig_>zpertestassemblies231	97.58	538	10	3	3	540	668	134	0.0	 901
+tdactonecontig_>tdacttestassemblies110	zpertwocontig_>zpertestassemblies231	97.76	491	9	2	3	493	489	1	0.0	 829
+tdactonecontig_>tdacttestassemblies110	zpertwocontig_>zpertestassemblies231	97.54	407	8	2	134	540	717	313	0.0	 682
+tdactonecontig_>tdacttestassemblies110	zpertwocontig_>zpertestassemblies231	98.07	311	5	1	3	313	310	1	2e-153	 531
+tdactonecontig_>tdacttestassemblies110	zpertwocontig_>zpertestassemblies231	97.80	227	4	1	314	540	717	492	7e-109	 383
+tdactonecontig_>tdacttestassemblies110	zpertwocontig_>zpertestassemblies231	99.24	131	1	0	3	133	131	1	3e-63	 232
+tdactonecontig_>tdacttestassemblies110	zpertwocontig_>zpertestassemblies231	97.87	47	1	0	494	540	717	671	1e-17	80.6
+tdactonecontig_>tdacttestassemblies110	mzonecontig_>mztestassemblies58	96.81	533	17	0	3	535	639	107	0.0	 884
+tdactonecontig_>tdacttestassemblies110	mzonecontig_>mztestassemblies58	94.59	536	28	1	5	540	816	282	0.0	 832
+tdactonecontig_>tdacttestassemblies110	mzonecontig_>mztestassemblies58	96.07	458	18	0	3	460	459	2	0.0	 746
+tdactonecontig_>tdacttestassemblies110	mzonecontig_>mztestassemblies58	92.19	461	34	2	81	540	921	462	0.0	 663
+tdactonecontig_>tdacttestassemblies110	mzonecontig_>mztestassemblies58	95.68	278	12	0	3	280	279	2	2e-128	 448
+tdactonecontig_>tdacttestassemblies110	mzonecontig_>mztestassemblies58	90.22	276	25	2	261	535	921	647	2e-104	 369
+tdactonecontig_>tdacttestassemblies110	mzonecontig_>mztestassemblies58	93.88	98	6	0	3	100	99	2	8e-39	 150
+tdactonecontig_>tdacttestassemblies110	mzonecontig_>mztestassemblies58	89.11	101	10	1	441	540	921	821	2e-32	 129
+tdactonecontig_>tdacttestassemblies110	tfloronecontig_>tflortestassemblies1561	97.33	487	10	3	54	540	1	484	0.0	 809
+tdactonecontig_>tdacttestassemblies110	tfloronecontig_>tflortestassemblies1561	96.59	411	11	3	3	413	130	537	0.0	 668
+tdactonecontig_>tdacttestassemblies110	tfloronecontig_>tflortestassemblies1561	97.72	307	5	2	234	540	1	305	2e-148	 515
+tdactonecontig_>tdacttestassemblies110	tfloronecontig_>tflortestassemblies1561	95.67	231	9	1	3	233	308	537	2e-104	 369
+tdactonecontig_>tdacttestassemblies110	tfloronecontig_>tflortestassemblies1561	98.43	127	2	0	414	540	1	127	5e-60	 221
+tdactonecontig_>tdacttestassemblies110	tfloronecontig_>tflortestassemblies1561	94.12	51	3	0	3	53	487	537	4e-17	78.8
+tdactonecontig_>tdacttestassemblies110	tperuonecontig_>tperutestassemblies12	98.61	360	4	1	42	401	359	1	0.0	 623
+tdactonecontig_>tdacttestassemblies110	tperuonecontig_>tperutestassemblies12	99.06	319	2	1	222	540	359	42	2e-161	 558
+tdactonecontig_>tdacttestassemblies110	tperuonecontig_>tperutestassemblies12	99.09	219	2	0	3	221	219	1	6e-110	 387
+tdactonecontig_>tdacttestassemblies110	tperuonecontig_>tperutestassemblies12	98.56	139	1	1	402	540	359	222	2e-65	 239
+tdactonecontig_>tdacttestassemblies110	tperuonecontig_>tperutestassemblies12	100.00	39	0	0	3	41	39	1	6e-15	71.6
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	394	410	577	561	0.005	31.9
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	214	230	577	561	0.005	31.9
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	16	0	0	34	49	577	562	0.018	30.1
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	394	408	32	18	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	214	228	32	18	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	34	48	32	18	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	394	408	214	200	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	214	228	214	200	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	34	48	214	200	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	394	408	396	382	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	214	228	396	382	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	34	48	396	382	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	394	408	1122	1108	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	214	228	1122	1108	0.062	28.3
+tdactonecontig_>tdacttestassemblies110	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	34	48	1122	1108	0.062	28.3
+# BLASTN 2.2.28+
+# Query: tfloronecontig_>tflortestassemblies1561
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 56 hits found
+tfloronecontig_>tflortestassemblies1561	tfloronecontig_>tflortestassemblies1561	100.00	537	0	0	1	537	1	537	0.0	 969
+tfloronecontig_>tflortestassemblies1561	tfloronecontig_>tflortestassemblies1561	96.38	359	10	3	181	537	1	358	2e-167	 578
+tfloronecontig_>tflortestassemblies1561	tfloronecontig_>tflortestassemblies1561	96.38	359	10	3	1	358	181	537	2e-167	 578
+tfloronecontig_>tflortestassemblies1561	tfloronecontig_>tflortestassemblies1561	95.00	180	8	1	359	537	1	180	6e-78	 280
+tfloronecontig_>tflortestassemblies1561	tfloronecontig_>tflortestassemblies1561	95.00	180	8	1	1	180	359	537	6e-78	 280
+tfloronecontig_>tflortestassemblies1561	tlaxonecontig_>tlaxtestassemblies696	97.59	540	9	4	1	537	72	610	0.0	 901
+tfloronecontig_>tflortestassemblies1561	tlaxonecontig_>tlaxtestassemblies696	97.44	468	9	3	1	466	252	718	0.0	 780
+tfloronecontig_>tflortestassemblies1561	tlaxonecontig_>tlaxtestassemblies696	97.45	431	8	3	110	537	1	431	0.0	 717
+tfloronecontig_>tflortestassemblies1561	tlaxonecontig_>tlaxtestassemblies696	98.26	288	3	2	1	287	432	718	7e-141	 489
+tfloronecontig_>tflortestassemblies1561	tlaxonecontig_>tlaxtestassemblies696	96.81	251	7	1	288	537	1	251	4e-118	 414
+tfloronecontig_>tflortestassemblies1561	tlaxonecontig_>tlaxtestassemblies696	97.25	109	2	1	1	109	611	718	2e-47	 179
+tfloronecontig_>tflortestassemblies1561	tlaxonecontig_>tlaxtestassemblies696	97.18	71	2	0	467	537	1	71	1e-29	 120
+tfloronecontig_>tflortestassemblies1561	tanderonecontig_>tandertestassemblies77	97.41	540	10	4	1	537	544	6	0.0	 897
+tfloronecontig_>tflortestassemblies1561	tanderonecontig_>tandertestassemblies77	97.22	539	13	2	1	537	724	186	0.0	 897
+tfloronecontig_>tflortestassemblies1561	tanderonecontig_>tandertestassemblies77	96.66	539	16	2	1	537	904	366	0.0	 884
+tfloronecontig_>tflortestassemblies1561	tanderonecontig_>tandertestassemblies77	95.19	540	23	3	1	537	1084	545	0.0	 847
+tfloronecontig_>tflortestassemblies1561	tanderonecontig_>tandertestassemblies77	94.95	535	24	3	6	537	1259	725	0.0	 832
+tfloronecontig_>tflortestassemblies1561	tanderonecontig_>tandertestassemblies77	98.90	365	2	2	1	363	365	1	0.0	 634
+tfloronecontig_>tflortestassemblies1561	tanderonecontig_>tandertestassemblies77	93.52	355	20	3	186	537	1259	905	9e-152	 526
+tfloronecontig_>tflortestassemblies1561	tanderonecontig_>tandertestassemblies77	99.46	185	1	0	1	185	185	1	1e-92	 329
+tfloronecontig_>tflortestassemblies1561	tanderonecontig_>tandertestassemblies77	93.14	175	11	1	364	537	1259	1085	2e-71	 259
+tfloronecontig_>tflortestassemblies1561	zpertwocontig_>zpertestassemblies231	96.67	540	12	6	1	537	617	81	0.0	 872
+tfloronecontig_>tflortestassemblies1561	zpertwocontig_>zpertestassemblies231	96.09	460	12	6	81	537	717	261	0.0	 728
+tfloronecontig_>tflortestassemblies1561	zpertwocontig_>zpertestassemblies231	96.81	439	10	4	1	436	439	2	0.0	 715
+tfloronecontig_>tflortestassemblies1561	zpertwocontig_>zpertestassemblies231	98.46	260	3	1	1	259	260	1	2e-128	 448
+tfloronecontig_>tflortestassemblies1561	zpertwocontig_>zpertestassemblies231	95.68	278	9	3	261	537	715	440	4e-125	 437
+tfloronecontig_>tflortestassemblies1561	zpertwocontig_>zpertestassemblies231	97.00	100	3	0	438	537	717	618	1e-43	 167
+tfloronecontig_>tflortestassemblies1561	zpertwocontig_>zpertestassemblies231	98.75	80	1	0	1	80	80	1	1e-35	 140
+tfloronecontig_>tflortestassemblies1561	mzonecontig_>mztestassemblies58	95.00	540	24	3	1	537	588	49	0.0	 841
+tfloronecontig_>tflortestassemblies1561	mzonecontig_>mztestassemblies58	94.26	540	27	4	1	537	767	229	0.0	 820
+tfloronecontig_>tflortestassemblies1561	mzonecontig_>mztestassemblies58	91.81	513	37	5	28	536	921	410	0.0	 719
+tfloronecontig_>tflortestassemblies1561	mzonecontig_>mztestassemblies58	95.33	407	16	3	1	404	408	2	0.0	 637
+tfloronecontig_>tflortestassemblies1561	mzonecontig_>mztestassemblies58	89.25	335	29	6	208	537	921	589	3e-120	 421
+tfloronecontig_>tflortestassemblies1561	mzonecontig_>mztestassemblies58	95.15	227	10	1	1	226	228	2	1e-100	 356
+tfloronecontig_>tflortestassemblies1561	mzonecontig_>mztestassemblies58	85.06	154	21	2	386	537	921	768	1e-43	 167
+tfloronecontig_>tflortestassemblies1561	mzonecontig_>mztestassemblies58	91.67	48	4	0	1	48	48	1	2e-14	69.8
+tfloronecontig_>tflortestassemblies1561	tdactonecontig_>tdacttestassemblies110	97.33	487	10	3	1	484	54	540	0.0	 809
+tfloronecontig_>tflortestassemblies1561	tdactonecontig_>tdacttestassemblies110	96.59	411	11	3	130	537	3	413	0.0	 668
+tfloronecontig_>tflortestassemblies1561	tdactonecontig_>tdacttestassemblies110	97.72	307	5	2	1	305	234	540	2e-148	 515
+tfloronecontig_>tflortestassemblies1561	tdactonecontig_>tdacttestassemblies110	95.67	231	9	1	308	537	3	233	2e-104	 369
+tfloronecontig_>tflortestassemblies1561	tdactonecontig_>tdacttestassemblies110	98.43	127	2	0	1	127	414	540	5e-60	 221
+tfloronecontig_>tflortestassemblies1561	tdactonecontig_>tdacttestassemblies110	94.12	51	3	0	487	537	3	53	4e-17	78.8
+tfloronecontig_>tflortestassemblies1561	tperuonecontig_>tperutestassemblies12	97.49	359	7	2	169	525	359	1	5e-174	 600
+tfloronecontig_>tflortestassemblies1561	tperuonecontig_>tperutestassemblies12	98.56	348	2	3	1	346	347	1	2e-172	 594
+tfloronecontig_>tflortestassemblies1561	tperuonecontig_>tperutestassemblies12	96.34	191	7	0	347	537	359	169	1e-87	 313
+tfloronecontig_>tflortestassemblies1561	tperuonecontig_>tperutestassemblies12	99.40	168	1	0	1	168	168	1	2e-83	 298
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	339	355	577	561	0.005	31.9
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	161	177	577	561	0.005	31.9
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	339	353	32	18	0.062	28.3
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	161	175	32	18	0.062	28.3
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	339	353	214	200	0.062	28.3
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	161	175	214	200	0.062	28.3
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	339	353	396	382	0.062	28.3
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	161	175	396	382	0.062	28.3
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	339	353	1122	1108	0.062	28.3
+tfloronecontig_>tflortestassemblies1561	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	161	175	1122	1108	0.062	28.3
+# BLASTN 2.2.28+
+# Query: tlaxonecontig_>tlaxtestassemblies696
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 75 hits found
+tlaxonecontig_>tlaxtestassemblies696	tlaxonecontig_>tlaxtestassemblies696	100.00	718	0	0	1	718	1	718	0.0	1296
+tlaxonecontig_>tlaxtestassemblies696	tlaxonecontig_>tlaxtestassemblies696	98.89	540	3	3	181	718	1	539	0.0	 937
+tlaxonecontig_>tlaxtestassemblies696	tlaxonecontig_>tlaxtestassemblies696	98.89	540	3	3	1	539	181	718	0.0	 937
+tlaxonecontig_>tlaxtestassemblies696	tlaxonecontig_>tlaxtestassemblies696	99.17	360	1	2	361	718	1	360	0.0	 628
+tlaxonecontig_>tlaxtestassemblies696	tlaxonecontig_>tlaxtestassemblies696	99.17	360	1	2	1	360	361	718	0.0	 628
+tlaxonecontig_>tlaxtestassemblies696	tlaxonecontig_>tlaxtestassemblies696	98.89	180	1	1	540	718	1	180	1e-87	 313
+tlaxonecontig_>tlaxtestassemblies696	tlaxonecontig_>tlaxtestassemblies696	98.89	180	1	1	1	180	540	718	1e-87	 313
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	98.75	720	6	3	1	718	795	77	0.0	1247
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	98.06	720	11	3	1	718	975	257	0.0	1225
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	97.36	719	18	1	1	718	1155	437	0.0	1207
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	99.35	616	2	2	1	615	615	1	0.0	1086
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	96.89	644	18	2	77	718	1259	616	0.0	1065
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	99.54	436	2	0	1	436	436	1	0.0	 778
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	96.55	464	14	2	257	718	1259	796	0.0	 758
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	100.00	256	0	0	1	256	256	1	1e-132	 462
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	95.42	284	11	2	437	718	1259	976	9e-128	 446
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	96.15	104	3	1	616	718	1259	1156	1e-43	 167
+tlaxonecontig_>tlaxtestassemblies696	tanderonecontig_>tandertestassemblies77	100.00	76	0	0	1	76	76	1	6e-35	 138
+tlaxonecontig_>tlaxtestassemblies696	zpertwocontig_>zpertestassemblies231	98.41	691	6	5	1	689	688	1	0.0	1178
+tlaxonecontig_>tlaxtestassemblies696	zpertwocontig_>zpertestassemblies231	98.07	569	6	5	152	718	717	152	0.0	 958
+tlaxonecontig_>tlaxtestassemblies696	zpertwocontig_>zpertestassemblies231	98.43	511	5	3	1	510	509	1	0.0	 875
+tlaxonecontig_>tlaxtestassemblies696	zpertwocontig_>zpertestassemblies231	98.71	388	3	2	332	718	717	331	0.0	 670
+tlaxonecontig_>tlaxtestassemblies696	zpertwocontig_>zpertestassemblies231	98.79	331	3	1	1	331	330	1	8e-167	 576
+tlaxonecontig_>tlaxtestassemblies696	zpertwocontig_>zpertestassemblies231	97.61	209	3	2	511	718	717	510	7e-98	 347
+tlaxonecontig_>tlaxtestassemblies696	zpertwocontig_>zpertestassemblies231	100.00	151	0	0	1	151	151	1	1e-75	 273
+tlaxonecontig_>tlaxtestassemblies696	zpertwocontig_>zpertestassemblies231	100.00	29	0	0	690	718	717	689	2e-09	53.6
+tlaxonecontig_>tlaxtestassemblies696	mzonecontig_>mztestassemblies58	95.83	720	27	3	1	718	838	120	0.0	1153
+tlaxonecontig_>tlaxtestassemblies696	mzonecontig_>mztestassemblies58	96.20	658	23	2	1	656	659	2	0.0	1067
+tlaxonecontig_>tlaxtestassemblies696	mzonecontig_>mztestassemblies58	93.74	623	35	4	99	718	921	300	0.0	 933
+tlaxonecontig_>tlaxtestassemblies696	mzonecontig_>mztestassemblies58	96.86	478	15	0	1	478	479	2	0.0	 794
+tlaxonecontig_>tlaxtestassemblies696	mzonecontig_>mztestassemblies58	92.76	442	30	2	279	718	921	480	0.0	 646
+tlaxonecontig_>tlaxtestassemblies696	mzonecontig_>mztestassemblies58	96.64	298	10	0	1	298	299	2	7e-142	 493
+tlaxonecontig_>tlaxtestassemblies696	mzonecontig_>mztestassemblies58	90.49	263	21	3	459	718	921	660	2e-99	 352
+tlaxonecontig_>tlaxtestassemblies696	mzonecontig_>mztestassemblies58	94.07	118	7	0	1	118	119	2	6e-48	 181
+tlaxonecontig_>tlaxtestassemblies696	mzonecontig_>mztestassemblies58	86.75	83	9	2	638	718	921	839	2e-21	93.3
+tlaxonecontig_>tlaxtestassemblies696	tdactonecontig_>tdacttestassemblies110	98.70	538	6	1	21	557	3	540	0.0	 935
+tlaxonecontig_>tlaxtestassemblies696	tdactonecontig_>tdacttestassemblies110	98.27	520	7	2	201	718	3	522	0.0	 890
+tlaxonecontig_>tlaxtestassemblies696	tdactonecontig_>tdacttestassemblies110	98.68	378	5	0	1	378	163	540	0.0	 659
+tlaxonecontig_>tlaxtestassemblies696	tdactonecontig_>tdacttestassemblies110	98.53	340	3	2	381	718	3	342	5e-169	 583
+tlaxonecontig_>tlaxtestassemblies696	tdactonecontig_>tdacttestassemblies110	98.99	198	2	0	1	198	343	540	2e-98	 349
+tlaxonecontig_>tlaxtestassemblies696	tdactonecontig_>tdacttestassemblies110	98.12	160	2	1	560	718	3	162	4e-75	 271
+tlaxonecontig_>tlaxtestassemblies696	tdactonecontig_>tdacttestassemblies110	100.00	18	0	0	1	18	523	540	0.002	33.7
+tlaxonecontig_>tlaxtestassemblies696	tfloronecontig_>tflortestassemblies1561	97.59	540	9	4	72	610	1	537	0.0	 901
+tlaxonecontig_>tlaxtestassemblies696	tfloronecontig_>tflortestassemblies1561	97.44	468	9	3	252	718	1	466	0.0	 780
+tlaxonecontig_>tlaxtestassemblies696	tfloronecontig_>tflortestassemblies1561	97.45	431	8	3	1	431	110	537	0.0	 717
+tlaxonecontig_>tlaxtestassemblies696	tfloronecontig_>tflortestassemblies1561	98.26	288	3	2	432	718	1	287	9e-141	 489
+tlaxonecontig_>tlaxtestassemblies696	tfloronecontig_>tflortestassemblies1561	96.81	251	7	1	1	251	288	537	6e-118	 414
+tlaxonecontig_>tlaxtestassemblies696	tfloronecontig_>tflortestassemblies1561	97.25	109	2	1	611	718	1	109	2e-47	 179
+tlaxonecontig_>tlaxtestassemblies696	tfloronecontig_>tflortestassemblies1561	97.18	71	2	0	1	71	467	537	2e-29	 120
+tlaxonecontig_>tlaxtestassemblies696	tperuonecontig_>tperutestassemblies12	99.44	360	1	1	60	419	359	1	0.0	 637
+tlaxonecontig_>tlaxtestassemblies696	tperuonecontig_>tperutestassemblies12	99.44	360	0	2	240	598	359	1	0.0	 634
+tlaxonecontig_>tlaxtestassemblies696	tperuonecontig_>tperutestassemblies12	98.67	301	1	3	420	718	359	60	2e-148	 515
+tlaxonecontig_>tlaxtestassemblies696	tperuonecontig_>tperutestassemblies12	100.00	239	0	0	1	239	239	1	2e-123	 432
+tlaxonecontig_>tlaxtestassemblies696	tperuonecontig_>tperutestassemblies12	99.17	120	1	0	599	718	359	240	4e-57	 212
+tlaxonecontig_>tlaxtestassemblies696	tperuonecontig_>tperutestassemblies12	100.00	59	0	0	1	59	59	1	1e-25	 107
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	591	607	577	561	0.007	31.9
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	412	428	577	561	0.007	31.9
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	232	248	577	561	0.007	31.9
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	52	68	577	561	0.007	31.9
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	591	605	32	18	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	412	426	32	18	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	232	246	32	18	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	52	66	32	18	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	591	605	214	200	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	412	426	214	200	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	232	246	214	200	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	52	66	214	200	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	591	605	396	382	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	412	426	396	382	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	232	246	396	382	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	52	66	396	382	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	591	605	1122	1108	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	412	426	1122	1108	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	232	246	1122	1108	0.084	28.3
+tlaxonecontig_>tlaxtestassemblies696	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	52	66	1122	1108	0.084	28.3
+# BLASTN 2.2.28+
+# Query: tperuonecontig_>tperutestassemblies12
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 45 hits found
+tperuonecontig_>tperutestassemblies12	tperuonecontig_>tperutestassemblies12	100.00	359	0	0	1	359	1	359	0.0	 648
+tperuonecontig_>tperutestassemblies12	tperuonecontig_>tperutestassemblies12	99.44	180	0	1	181	359	1	180	6e-89	 316
+tperuonecontig_>tperutestassemblies12	tperuonecontig_>tperutestassemblies12	99.44	180	0	1	1	180	181	359	6e-89	 316
+tperuonecontig_>tperutestassemblies12	tanderonecontig_>tandertestassemblies77	99.72	359	1	0	1	359	198	556	0.0	 643
+tperuonecontig_>tperutestassemblies12	tanderonecontig_>tandertestassemblies77	99.72	360	0	1	1	359	18	377	0.0	 641
+tperuonecontig_>tperutestassemblies12	tanderonecontig_>tandertestassemblies77	98.33	360	4	2	1	359	378	736	4e-179	 616
+tperuonecontig_>tperutestassemblies12	tanderonecontig_>tandertestassemblies77	98.04	358	6	1	1	357	557	914	2e-177	 610
+tperuonecontig_>tperutestassemblies12	tanderonecontig_>tandertestassemblies77	96.39	360	12	1	1	359	737	1096	2e-170	 587
+tperuonecontig_>tperutestassemblies12	tanderonecontig_>tandertestassemblies77	96.50	343	11	1	1	342	917	1259	8e-163	 562
+tperuonecontig_>tperutestassemblies12	tanderonecontig_>tandertestassemblies77	99.49	197	0	1	164	359	1	197	3e-98	 347
+tperuonecontig_>tperutestassemblies12	tanderonecontig_>tandertestassemblies77	98.16	163	3	0	1	163	1097	1259	4e-78	 280
+tperuonecontig_>tperutestassemblies12	tanderonecontig_>tandertestassemblies77	100.00	17	0	0	343	359	1	17	0.003	31.9
+tperuonecontig_>tperutestassemblies12	tlaxonecontig_>tlaxtestassemblies696	99.44	360	1	1	1	359	419	60	0.0	 637
+tperuonecontig_>tperutestassemblies12	tlaxonecontig_>tlaxtestassemblies696	99.44	360	0	2	1	359	598	240	0.0	 634
+tperuonecontig_>tperutestassemblies12	tlaxonecontig_>tlaxtestassemblies696	98.67	301	1	3	60	359	718	420	1e-148	 515
+tperuonecontig_>tperutestassemblies12	tlaxonecontig_>tlaxtestassemblies696	100.00	239	0	0	1	239	239	1	1e-123	 432
+tperuonecontig_>tperutestassemblies12	tlaxonecontig_>tlaxtestassemblies696	99.17	120	1	0	240	359	718	599	2e-57	 212
+tperuonecontig_>tperutestassemblies12	tlaxonecontig_>tlaxtestassemblies696	100.00	59	0	0	1	59	59	1	5e-26	 107
+tperuonecontig_>tperutestassemblies12	tdactonecontig_>tdacttestassemblies110	98.61	360	4	1	1	359	401	42	0.0	 623
+tperuonecontig_>tperutestassemblies12	tdactonecontig_>tdacttestassemblies110	99.06	319	2	1	42	359	540	222	1e-161	 558
+tperuonecontig_>tperutestassemblies12	tdactonecontig_>tdacttestassemblies110	99.09	219	2	0	1	219	221	3	4e-110	 387
+tperuonecontig_>tperutestassemblies12	tdactonecontig_>tdacttestassemblies110	98.56	139	1	1	222	359	540	402	1e-65	 239
+tperuonecontig_>tperutestassemblies12	tdactonecontig_>tdacttestassemblies110	100.00	39	0	0	1	39	41	3	4e-15	71.6
+tperuonecontig_>tperutestassemblies12	zpertwocontig_>zpertestassemblies231	98.33	360	4	2	1	359	93	451	4e-179	 616
+tperuonecontig_>tperutestassemblies12	zpertwocontig_>zpertestassemblies231	98.06	360	3	4	1	359	273	629	3e-175	 603
+tperuonecontig_>tperutestassemblies12	zpertwocontig_>zpertestassemblies231	98.90	272	2	1	89	359	1	272	3e-136	 473
+tperuonecontig_>tperutestassemblies12	zpertwocontig_>zpertestassemblies231	98.51	268	2	2	1	268	452	717	7e-132	 459
+tperuonecontig_>tperutestassemblies12	zpertwocontig_>zpertestassemblies231	98.91	92	0	1	269	359	1	92	3e-41	 158
+tperuonecontig_>tperutestassemblies12	zpertwocontig_>zpertestassemblies231	98.86	88	1	0	1	88	630	717	4e-40	 154
+tperuonecontig_>tperutestassemblies12	mzonecontig_>mztestassemblies58	97.22	360	9	1	1	359	61	420	1e-174	 601
+tperuonecontig_>tperutestassemblies12	mzonecontig_>mztestassemblies58	96.94	360	10	1	1	359	241	600	4e-173	 596
+tperuonecontig_>tperutestassemblies12	mzonecontig_>mztestassemblies58	95.56	360	13	3	1	358	421	779	2e-164	 567
+tperuonecontig_>tperutestassemblies12	mzonecontig_>mztestassemblies58	91.30	322	25	3	1	320	601	921	2e-127	 444
+tperuonecontig_>tperutestassemblies12	mzonecontig_>mztestassemblies58	95.82	239	9	1	122	359	2	240	5e-109	 383
+tperuonecontig_>tperutestassemblies12	mzonecontig_>mztestassemblies58	90.07	141	13	1	2	141	781	921	2e-50	 188
+tperuonecontig_>tperutestassemblies12	mzonecontig_>mztestassemblies58	91.38	58	4	1	302	358	2	59	3e-17	78.8
+tperuonecontig_>tperutestassemblies12	tfloronecontig_>tflortestassemblies1561	97.49	359	7	2	1	359	525	169	3e-174	 600
+tperuonecontig_>tperutestassemblies12	tfloronecontig_>tflortestassemblies1561	98.56	348	2	3	1	347	346	1	1e-172	 594
+tperuonecontig_>tperutestassemblies12	tfloronecontig_>tflortestassemblies1561	96.34	191	7	0	169	359	537	347	7e-88	 313
+tperuonecontig_>tperutestassemblies12	tfloronecontig_>tflortestassemblies1561	99.40	168	1	0	1	168	168	1	2e-83	 298
+tperuonecontig_>tperutestassemblies12	hypdipfourcontig_>hypdiptestassemblies47	100.00	17	0	0	172	188	561	577	0.003	31.9
+tperuonecontig_>tperutestassemblies12	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	174	188	18	32	0.041	28.3
+tperuonecontig_>tperutestassemblies12	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	174	188	200	214	0.041	28.3
+tperuonecontig_>tperutestassemblies12	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	174	188	382	396	0.041	28.3
+tperuonecontig_>tperutestassemblies12	hypdipfourcontig_>hypdiptestassemblies47	100.00	15	0	0	174	188	1108	1122	0.041	28.3
+# BLASTN 2.2.28+
+# Query: urelonecontig_>ureltestassemblies757
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 39 hits found
+urelonecontig_>ureltestassemblies757	urelonecontig_>ureltestassemblies757	100.00	836	0	0	1	836	1	836	0.0	1508
+urelonecontig_>ureltestassemblies757	urelonecontig_>ureltestassemblies757	92.65	653	46	2	185	836	1	652	0.0	 955
+urelonecontig_>ureltestassemblies757	urelonecontig_>ureltestassemblies757	92.65	653	46	2	1	652	185	836	0.0	 955
+urelonecontig_>ureltestassemblies757	urelonecontig_>ureltestassemblies757	93.39	469	30	1	368	836	1	468	0.0	 702
+urelonecontig_>ureltestassemblies757	urelonecontig_>ureltestassemblies757	93.39	469	30	1	1	468	368	836	0.0	 702
+urelonecontig_>ureltestassemblies757	urelonecontig_>ureltestassemblies757	91.23	285	25	0	552	836	1	285	4e-114	 401
+urelonecontig_>ureltestassemblies757	urelonecontig_>ureltestassemblies757	91.23	285	25	0	1	285	552	836	4e-114	 401
+urelonecontig_>ureltestassemblies757	urelonecontig_>ureltestassemblies757	94.06	101	6	0	736	836	1	101	3e-40	 156
+urelonecontig_>ureltestassemblies757	urelonecontig_>ureltestassemblies757	94.06	101	6	0	1	101	736	836	3e-40	 156
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	85.71	42	6	0	14	55	144	103	3e-08	50.0
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	91.18	34	3	0	749	782	144	111	1e-07	48.2
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	68.31	142	43	2	383	523	142	2	4e-07	46.4
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	83.33	42	7	0	14	55	329	288	1e-06	44.6
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	88.24	34	4	0	749	782	329	296	1e-06	44.6
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	65.91	220	66	5	383	597	512	297	1e-06	44.6
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	83.33	42	7	0	14	55	514	473	1e-06	44.6
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	88.24	34	4	0	749	782	514	481	1e-06	44.6
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	83.33	42	7	0	14	55	689	648	1e-06	44.6
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	88.24	34	4	0	749	782	689	656	1e-06	44.6
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	87.88	33	4	0	565	597	144	112	4e-06	42.8
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	65.73	213	64	5	390	597	865	657	2e-05	41.0
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	66.90	142	45	2	383	523	327	187	2e-04	37.4
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	84.85	33	5	0	565	597	514	482	2e-04	37.4
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	67.83	143	41	4	383	523	687	548	2e-04	37.4
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	78.57	42	9	0	14	55	874	833	7e-04	35.6
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	82.35	34	6	0	749	782	874	841	7e-04	35.6
+urelonecontig_>ureltestassemblies757	anepaltwocontig_>anepaltestassemblies828	78.79	33	7	0	565	597	874	842	0.097	28.3
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	92.31	26	2	0	16	41	83	108	5e-05	39.2
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	92.31	26	2	0	383	408	83	108	5e-05	39.2
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	92.31	26	2	0	567	592	83	108	5e-05	39.2
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	92.31	26	2	0	751	776	83	108	5e-05	39.2
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	92.31	26	2	0	16	41	462	487	5e-05	39.2
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	92.31	26	2	0	383	408	462	487	5e-05	39.2
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	92.31	26	2	0	567	592	462	487	5e-05	39.2
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	92.31	26	2	0	751	776	462	487	5e-05	39.2
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	88.00	25	1	1	392	414	282	306	0.028	30.1
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	88.00	25	1	1	392	414	661	685	0.028	30.1
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	87.50	24	1	1	576	597	282	305	0.097	28.3
+urelonecontig_>ureltestassemblies757	urelthreecontig_>ureltestassemblies166	87.50	24	1	1	576	597	661	684	0.097	28.3
+# BLASTN 2.2.28+
+# Query: zperonecontig_>zpertestassemblies352
+# Database: allranks.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 25 hits found
+zperonecontig_>zpertestassemblies352	zperonecontig_>zpertestassemblies352	100.00	713	0	0	1	713	1	713	0.0	1287
+zperonecontig_>zpertestassemblies352	zperonecontig_>zpertestassemblies352	95.81	358	12	3	358	713	1	357	4e-164	 567
+zperonecontig_>zpertestassemblies352	zperonecontig_>zpertestassemblies352	95.81	358	12	3	1	357	358	713	4e-164	 567
+zperonecontig_>zpertestassemblies352	tflorthreecontig_>tflortestassemblies2306	95.67	716	26	4	3	713	1009	294	0.0	1139
+zperonecontig_>zpertestassemblies352	tflorthreecontig_>tflortestassemblies2306	94.99	718	31	4	1	713	1370	653	0.0	1119
+zperonecontig_>zpertestassemblies352	tflorthreecontig_>tflortestassemblies2306	94.27	715	34	3	1	712	1723	1013	0.0	1097
+zperonecontig_>zpertestassemblies352	tflorthreecontig_>tflortestassemblies2306	95.25	652	26	4	1	647	652	1	0.0	1023
+zperonecontig_>zpertestassemblies352	tflorthreecontig_>tflortestassemblies2306	93.88	425	19	4	291	713	1790	1371	0.0	 637
+zperonecontig_>zpertestassemblies352	tflorthreecontig_>tflortestassemblies2306	94.41	286	14	2	3	286	291	6	5e-125	 437
+zperonecontig_>zpertestassemblies352	tflorthreecontig_>tflortestassemblies2306	95.52	67	2	1	648	713	1790	1724	1e-24	 104
+zperonecontig_>zpertestassemblies352	tdactthreecontig_>tdacttestassemblies55	95.40	718	26	6	1	713	309	1024	0.0	1126
+zperonecontig_>zpertestassemblies352	tdactthreecontig_>tdacttestassemblies55	95.80	667	21	6	52	713	1	665	0.0	1056
+zperonecontig_>zpertestassemblies352	tdactthreecontig_>tdacttestassemblies55	95.12	410	18	2	1	408	666	1075	0.0	 643
+zperonecontig_>zpertestassemblies352	tdactthreecontig_>tdacttestassemblies55	95.13	308	12	2	409	713	1	308	1e-138	 482
+zperonecontig_>zpertestassemblies352	tdactthreecontig_>tdacttestassemblies55	96.08	51	2	0	1	51	1025	1075	1e-18	84.2
+zperonecontig_>zpertestassemblies352	tlaxthreecontig_>tlaxtestassemblies67	95.74	587	21	3	131	713	1	587	0.0	 937
+zperonecontig_>zpertestassemblies352	tlaxthreecontig_>tlaxtestassemblies67	94.86	486	21	3	3	484	231	716	0.0	 755
+zperonecontig_>zpertestassemblies352	tlaxthreecontig_>tlaxtestassemblies67	96.93	228	6	1	487	713	1	228	1e-106	 376
+zperonecontig_>zpertestassemblies352	tlaxthreecontig_>tlaxtestassemblies67	94.49	127	6	1	3	128	590	716	9e-52	 194
+zperonecontig_>zpertestassemblies352	tanderfourcontig_>tandertestassemblies384	96.35	356	9	3	290	643	1	354	3e-166	 574
+zperonecontig_>zpertestassemblies352	tanderfourcontig_>tandertestassemblies384	96.17	287	8	3	1	286	69	353	5e-131	 457
+zperonecontig_>zpertestassemblies352	tanderfourcontig_>tandertestassemblies384	94.12	68	3	1	647	713	1	68	5e-24	 102
+zperonecontig_>zpertestassemblies352	tperuthreecontig_>tperutestassemblies33	95.54	359	14	2	26	382	359	1	1e-164	 569
+zperonecontig_>zpertestassemblies352	tperuthreecontig_>tperutestassemblies33	95.21	334	13	2	383	713	359	26	4e-151	 524
+zperonecontig_>zpertestassemblies352	tperuthreecontig_>tperutestassemblies33	95.65	23	1	0	3	25	23	1	2e-04	37.4
+# BLAST processed 15 queries
