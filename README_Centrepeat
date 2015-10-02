@@ -500,7 +500,10 @@ And thats it.
 
 Wait, no its not.  Doing one more analysis to show homology between top 4 contigs.
 
+makeblastdb -in allranks.fasta -dbtype 'nucl' -parse_seqids
 
+blastn -query allranks.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db allranks.fasta -task blastn -out DB_allrankshomology
 
+blastn -query topcontigforall.fasta -evalue 1E-1 -outfmt 7 -max_target_seqs 15000 -db allranks.fasta -task blastn -out DB_allrankshomology
 
 
