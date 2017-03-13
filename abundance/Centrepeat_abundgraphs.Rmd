@@ -6,22 +6,50 @@ output: html_document
 ```{r}
 library(ggplot2)
 library(reshape2)
+library(cowplot)
 
 data <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_clean.csv")
+data <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_clean_reveiwer_ordered.csv")
+data<-read.csv("~/Desktop/reordertry.csv")
+data <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_clean_estep2.csv")
+
+#data$X.1 <- NULL
+#data$X <- NULL
+#data <- data[-c(16:21),]
+#ord<- 1:15
+#data$Taxa <- factor(data$Taxa,levels=1:15)
+#factor(data$Taxa)
+
 data.m <- melt(data,id.vars="Taxa")
+#data.m[,4]
 names(data.m)[2]<-paste("Rank")
 #names(data.m)[3]<-paste("Percent Genomic Composition")
-ggplot(data.m, aes(Taxa, value)) + 
-  geom_bar(aes(fill = Rank), position = "dodge", stat="identity") + labs(y="Percent Genomic Composition")
+
+ggplot(data.m, aes(Taxa, value),order_by(Taxa)) + geom_bar(aes(fill = Rank), position = "dodge", stat="identity") + labs(y="Percent Genomic Composition")+theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+ggplot(data.m, aes(Taxa, value),order_by(Taxa)) + geom_bar(aes(fill = Rank), position = "dodge", stat="identity") + labs(y="Percent Genomic Composition")+theme(axis.text.x = element_text(angle = 90, hjust = 1))+ scale_x_discrete(labels=c("1 "=" O. sativa" , "2 "=" P. edulis" , "3 "=" A. nepalensis" , "4 "=" U. digitatum" , "5 "=" S. bicolor" , "6 "=" A. mutica" , "7 "=" H. hirta" , "8 "=" I. rugosum" , "9 "=" Z. mays" , "10 "=" Z. perennis" , "11 "=" T. andersonii" , "12 "=" T. dactyloides" , "13 "=" T. floridanum" , "14 "=" T. laxum" , "15 "=" T. peruvianus"))
+
+#THIS ONE GENERATES FINAL FIG
+ggplot(data.m, aes(Taxa, value),order_by(Taxa)) + geom_bar(aes(fill = Rank), position = "dodge", stat="identity") + labs(y="Percent Genomic Composition")+theme(axis.text.x = element_text(angle = 90, hjust = 1))+ scale_x_discrete(labels=c("a"="O.sativa","b"="P.edulis","c"="A.nepalensis","d"="Z.mays","e"="Z.perennis","f"="T.andersonii","g"="T.dactyloides","h"="T.floridanum","i"="T.laxum","j"="T.peruvianus","k"="U.digitatum","l"="A.mutica","m"="I.rugosum","n"="H.hirta","o"="S.bicolor"))+guides(fill=FALSE)+theme(axis.title.x=element_blank())
+
+
+ggplot(data.m, aes(Taxa, value)) + geom_bar(position = "dodge", stat="identity") + labs(y="Percent Genomic Composition")+theme(axis.text.x = element_text(angle = 90, hjust = 1))+scale_x_discrete(labels=c("a"="O.sativa","b"="P.edulis","c"="A.nepalensis","d"="Z.mays","e"="Z.perennis","f"="T.andersonii","g"="T.dactyloides","h"="T.floridanum","i"="T.laxum","j"="T.peruvianus","k"="U.digitatum","l"="A.mutica","m"="I.rugosum","n"="H.hirta","o"="S.bicolor"))
+
+
+
+
+
 
 data2 <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_totals.csv")
 ggplot(data2, aes(Taxa, Total))+ geom_bar(aes(fill = Taxa),stat="identity") +labs(x="",y="Tandem Repeat Content")+theme(axis.ticks = element_blank(), axis.text.x = element_blank())+theme_bw()
 
 data2 <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_totals2.csv")
-data2 <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_totals2.csv")
+data2 <- read.csv("~/Desktop/Master_totalorder.txt")
+
+data2 <- read.csv("~/Documents/Projects/Huff_CentromereEvo/Github_centrepeat/abundance/Master_totals_estep.csv")
+
 data2$Taxa <- factor(data2$Taxa, levels=data2$Taxa)
-ggplot(data2, aes(Taxa, Total))+ geom_bar(stat="identity") +labs(x="",y="Tandem Repeat Content")
-+theme(axis.ticks = element_blank(), axis.text.x = element_blank())
+ggplot(data2, aes(Taxa, Total))+ geom_bar(stat="identity") +labs(x="",y="Tandem Repeat Content (%)")+theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 ```
 
